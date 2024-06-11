@@ -1,4 +1,4 @@
-import Header from "../components/Header";
+import Header from "./components/Header";
 import "../styles/styles.scss";
 import type { AppProps } from "next/app";
 
