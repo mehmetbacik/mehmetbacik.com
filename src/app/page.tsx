@@ -9,7 +9,7 @@ import Contact from './components/Contact';
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function Page() {
   return (
     <main className={styles.main}>
       <Header />

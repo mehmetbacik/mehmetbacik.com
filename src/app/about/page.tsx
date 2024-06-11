@@ -1,11 +1,9 @@
 import About from "../components/About";
 
-const AboutPage = () => {
+export default function Page() {
   return (
     <div className="container mx-auto px-4">
       <About />
     </div>
   );
-};
-
-export default AboutPage;
+}
