@@ -2,9 +2,11 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -14,7 +16,8 @@ const Header: React.FC = () => {
     <header className="bg-gray-800 text-white w-full px-2">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-5 px-4 md:px-0">
-          <h1 className="text-lg font-medium">Mehmet Bacik</h1>
+          <h1 className="text-lg font-medium">MEHMET BACIK</h1>
+          <h2>Frontend Developer</h2>
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
@@ -63,7 +66,9 @@ const Header: React.FC = () => {
               <li>
                 <Link
                   href="/"
-                  className="block py-2 md:py-0 hover:text-gray-400"
+                  className={`block py-2 md:py-0 hover:text-gray-400 ${
+                    pathname === "/" ? "text-blue-500" : ""
+                  }`}
                 >
                   Home
                 </Link>
@@ -71,7 +76,9 @@ const Header: React.FC = () => {
               <li>
                 <Link
                   href="/about"
-                  className="block py-2 md:py-0 hover:text-gray-400"
+                  className={`block py-2 md:py-0 hover:text-gray-400 ${
+                    pathname === "/about" ? "text-blue-500" : ""
+                  }`}
                 >
                   About
                 </Link>
@@ -79,7 +86,9 @@ const Header: React.FC = () => {
               <li>
                 <Link
                   href="/experience"
-                  className="block py-2 md:py-0 hover:text-gray-400"
+                  className={`block py-2 md:py-0 hover:text-gray-400 ${
+                    pathname === "/experience" ? "text-blue-500" : ""
+                  }`}
                 >
                   Experience
                 </Link>
@@ -87,7 +96,9 @@ const Header: React.FC = () => {
               <li>
                 <Link
                   href="/contact"
-                  className="block py-2 md:py-0 hover:text-gray-400"
+                  className={`block py-2 md:py-0 hover:text-gray-400 ${
+                    pathname === "/contact" ? "text-blue-500" : ""
+                  }`}
                 >
                   Contact
                 </Link>
