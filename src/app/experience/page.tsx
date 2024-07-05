@@ -1,5 +1,5 @@
-import Experience from "../components/Experience";
-import Header from "../components/Header";
+import Experience from "../../components/Experience";
+import Header from "../../components/Header";
 
 export default function Page() {
   return (

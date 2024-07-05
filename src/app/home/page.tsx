@@ -1,7 +1,7 @@
-import Header from "@/app/components/Header";
-import About from "@/app/pages/Home/components/About";
-import Contact from "@/app/pages/Home/components/Contact";
-import styles from "../../page.module.css";
+import Header from "@/components/Header";
+import About from "@/app/home/components/About";
+import Contact from "@/app/home/components/Contact";
+import styles from "../page.module.css";
 
 const Home = () => {
   return (
