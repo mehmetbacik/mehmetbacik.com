@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+import Header from "@/components/Header/Header";
 import About from "@/app/home/components/About";
 import Contact from "@/app/home/components/Contact";
 import styles from "../page.module.css";
