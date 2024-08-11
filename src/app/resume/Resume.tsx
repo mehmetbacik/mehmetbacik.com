@@ -1,11 +1,14 @@
-export default function Resume() {
+interface ResumeProps {
+    id: string;
+  }
+  
+  const Resume: React.FC<ResumeProps> = ({ id }) => {
     return (
-      <section
-        id="resume"
-        className="min-h-screen flex items-center justify-center"
-      >
-        <h1 className="text-4xl font-bold">Resume</h1>
+      <section id={id} className="min-h-screen">
+        <h1>Resume</h1>
       </section>
     );
-  }
+  };
+  
+  export default Resume;
   

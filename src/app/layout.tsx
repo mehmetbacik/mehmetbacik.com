@@ -1,4 +1,4 @@
-import Sidebar from "@/components/Sidebar/Sidebar";
+
 
 export const metadata = {
   title: "Mehmet BACIK",
@@ -14,8 +14,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <div className="flex">
-          <Sidebar />
-          <main className="flex-1 p-4">{children}</main>
+          <div className="flex-1 p-4">{children}</div>
         </div>
       </body>
     </html>

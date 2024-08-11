@@ -1,10 +1,13 @@
-export default function Home() {
+interface HomeProps {
+  id: string;
+}
+
+const Home: React.FC<HomeProps> = ({ id }) => {
   return (
-    <section
-      id="home"
-      className="min-h-screen flex items-center justify-center"
-    >
-      <h1 className="text-4xl font-bold">Welcome to My Portfolio</h1>
+    <section id={id} className="min-h-screen">
+      <h1>Home</h1>
     </section>
   );
-}
+};
+
+export default Home;

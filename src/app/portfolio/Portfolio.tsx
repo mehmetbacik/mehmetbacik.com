@@ -1,11 +1,14 @@
-export default function Portfolio() {
+interface PortfolioProps {
+    id: string;
+  }
+  
+  const Portfolio: React.FC<PortfolioProps> = ({ id }) => {
     return (
-      <section
-        id="portfolio"
-        className="min-h-screen flex items-center justify-center"
-      >
-        <h1 className="text-4xl font-bold">Portfolio</h1>
+      <section id={id} className="min-h-screen">
+        <h1>Portfolio</h1>
       </section>
     );
-  }
+  };
+  
+  export default Portfolio;
   

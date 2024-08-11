@@ -1,11 +1,14 @@
-export default function Services() {
+interface ServicesProps {
+    id: string;
+  }
+  
+  const Services: React.FC<ServicesProps> = ({ id }) => {
     return (
-      <section
-        id="services"
-        className="min-h-screen flex items-center justify-center"
-      >
-        <h1 className="text-4xl font-bold">Services</h1>
+      <section id={id} className="min-h-screen">
+        <h1>Services</h1>
       </section>
     );
-  }
+  };
+  
+  export default Services;
   
