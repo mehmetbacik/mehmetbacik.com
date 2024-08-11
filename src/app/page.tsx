@@ -1,12 +1,20 @@
-import { Inter } from 'next/font/google'
-import '../styles/styles.scss';
+import Home from "@/app/home/Home";
+import About from "@/app/about/About";
+import Resume from "@/app/resume/Resume";
+import Portfolio from "@/app/portfolio/Portfolio";
+import Services from "@/app/services/Services";
+import Contact from "@/app/contact/Contact";
+import "@/styles/styles.scss";
 
-const inter = Inter({ subsets: ['latin'] })
-
-export default function Page() {
+export default function MainPage() {
   return (
-    <div>
-      Test
-    </div>
-  )
+    <>
+      <Home />
+      <About />
+      <Resume />
+      <Portfolio />
+      <Services />
+      <Contact />
+    </>
+  );
 }
