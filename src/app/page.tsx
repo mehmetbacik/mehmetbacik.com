@@ -11,7 +11,7 @@ export default function MainPage() {
   return (
     <>
       <Sidebar />
-      <main className="ml-20">
+      <main>
         <Home id="home" />
         <About id="about" />
         <Resume id="resume" />
