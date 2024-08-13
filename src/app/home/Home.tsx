@@ -17,8 +17,9 @@ const Home: React.FC<HomeProps> = ({ id }) => {
       id={id}
       className={`min-h-screen flex flex-col items-center justify-center text-black ${styles.home}`}
     >
-      <div className="text-center px-4 md:px-8">
-        <h1 className={`text-4xl md:text-6xl font-bold ${styles.hero_title}`}>
+      <div className="text-center px-4 md:px-8 relative z-50">
+        <h1 className="text-4xl md:text-6xl font-bold">Mehmet BACIK</h1>
+        <h2 className={`text-4xl md:text-6xl font-bold ${styles.hero_title}`}>
           I&apos;m{" "}
           <span
             className={`text-4xl md:text-6xl font-bold inline-block ${styles.hero_subtitle}`}
@@ -26,30 +27,23 @@ const Home: React.FC<HomeProps> = ({ id }) => {
             <Typewriter
               onInit={(typewriter) => {
                 typewriter
-                  .typeString("Developer")
+                  .typeString("Frontend Developer")
                   .pauseFor(2000)
                   .deleteAll()
                   .typeString("Freelancer")
                   .pauseFor(2000)
                   .deleteAll()
-                  .typeString("Photographer")
-                  .pauseFor(2000)
                   .start();
               }}
               options={{
                 delay: 100,
                 deleteSpeed: 100,
                 loop: true,
-                autoStart: true, 
+                autoStart: true,
               }}
             />
           </span>
-        </h1>
-        <p className="mt-4 text-lg md:text-xl">
-          Welcome to my personal website. I&apos;m passionate about creating
-          innovative solutions and exploring new opportunities. Feel free to
-          browse my portfolio and get in touch!
-        </p>
+        </h2>
         <div className={`flex gap-4 mt-8 ${styles.socialIcons}`}>
           <a
             href="https://www.linkedin.com/in/your-profile"
