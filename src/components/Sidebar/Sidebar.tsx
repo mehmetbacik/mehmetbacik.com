@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { Icon } from "@iconify/react";
+import { Tooltip } from "react-tooltip";
+import "react-tooltip/dist/react-tooltip.css";
 import styles from "./styles/Sidebar.module.scss";
 
 const Sidebar = () => {
@@ -48,17 +50,14 @@ const Sidebar = () => {
 
   return (
     <nav className={styles.sidebar}>
-      {/* Mobile menu button */}
       <button className={styles.mobile_menu_button} onClick={handleMenuClick}>
         <Icon icon="mdi:menu" width="24" height="24" />
       </button>
-      {/* Mobile menu dropdown */}
       <div
         className={`${styles.sidebar_menu} ${
           isMenuOpen ? "translate-y-0" : "-translate-y-full"
         } md:translate-y-0`}
       >
-        {/* Mobile close button */}
         <button
           className={styles.mobile_close_button}
           onClick={handleMenuClick}
@@ -85,10 +84,12 @@ const Sidebar = () => {
               <Link
                 href={`#${item.name.toLowerCase()}`}
                 className={styles.menu_item_content}
+                data-tooltip-id={item.name}
+                data-tooltip-content={item.name}
               >
                 <Icon icon={item.icon} width="24" height="24" />
-                <span>{item.name}</span>
               </Link>
+              <Tooltip id={item.name} place="right" />
             </li>
           ))}
         </ul>
