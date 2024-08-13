@@ -9,25 +9,20 @@ interface HomeProps {
   id: string;
 }
 
-const words = ["Developer", "Freelancer", "Photographer"];
-
 const Home: React.FC<HomeProps> = ({ id }) => {
   return (
-    <section
-      id={id}
-      className={`min-h-screen flex flex-col items-center justify-center text-black ${styles.home}`}
-    >
-      <div className="text-center px-4 md:px-8 relative z-50">
-        <h1 className="text-4xl md:text-6xl font-bold">Mehmet BACIK</h1>
-        <h2 className={`text-4xl md:text-6xl font-bold ${styles.hero_title}`}>
-          I&apos;m{" "}
-          <span
-            className={`text-4xl md:text-6xl font-bold inline-block ${styles.hero_subtitle}`}
-          >
+    <section id={id} className={styles.home}>
+      <div className={styles.hero}>
+        <div className={styles.hero_content}>
+          <h1 className={styles.hero_title}>Mehmet BACIK</h1>
+          <span className={styles.hero_subtitle}>
             <Typewriter
               onInit={(typewriter) => {
                 typewriter
                   .typeString("Frontend Developer")
+                  .pauseFor(2000)
+                  .deleteAll()
+                  .typeString("Web Developer")
                   .pauseFor(2000)
                   .deleteAll()
                   .typeString("Freelancer")
@@ -43,42 +38,45 @@ const Home: React.FC<HomeProps> = ({ id }) => {
               }}
             />
           </span>
-        </h2>
-        <div className={`flex gap-4 mt-8 ${styles.socialIcons}`}>
+        </div>
+        <div className={styles.hero_socialIcons}>
           <a
-            href="https://www.linkedin.com/in/your-profile"
+            href="https://www.linkedin.com/in/mehmetbacik/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
           >
-            <Icon icon="mdi:linkedin" width="24" height="24" />
+            <Icon icon="fa6-brands:linkedin" width="30" height="30" />
           </a>
           <a
-            href="https://github.com/your-profile"
+            href="https://github.com/mehmetbacik"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
           >
-            <Icon icon="mdi:github" width="24" height="24" />
+            <Icon icon="fa6-brands:github" width="30" height="30" />
           </a>
           <a
-            href="https://twitter.com/your-profile"
+            href="https://x.com/mehmetbacikk"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Twitter"
+            aria-label="x"
           >
-            <Icon icon="mdi:twitter" width="24" height="24" />
+            <Icon icon="fa6-brands:x-twitter" width="30" height="30" />
           </a>
           <a
-            href="https://www.instagram.com/your-profile"
+            href="https://www.instagram.com/mehmetbacik/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
           >
-            <Icon icon="mdi:instagram" width="24" height="24" />
+            <Icon icon="fa6-brands:instagram" width="30" height="30" />
           </a>
         </div>
       </div>
+      <div className={styles.mouseIcon}>
+          <Icon icon="bi:mouse" width="40" height="40" />
+        </div>
     </section>
   );
 };

@@ -9,6 +9,7 @@ html {
 }
 
 body {
+  @include font;
   margin: 0;
 }
 

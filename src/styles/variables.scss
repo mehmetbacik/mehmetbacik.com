@@ -1,6 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+$font: "Montserrat", sans-serif;
+$size: 1rem;
+
+@mixin font {
+  font-family: $font;
+  font-size: $size;
+}
 
 $white: hsl(0, 0%, 100%);
 $black: hsl(0, 0%, 0%);
-$very-light-gray:hsl(0, 0%, 91%);
-$bright-blue:hsl(209, 95%, 38%);
-$slate-blue:hsl(210, 14%, 31%);
+$very-light-gray: hsl(0, 0%, 91%);
+$bright-blue: hsl(209, 95%, 38%);
+$slate-blue: hsl(210, 14%, 31%);
+

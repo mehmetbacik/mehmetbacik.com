@@ -1,52 +1,88 @@
+@import "../../../styles/variables.scss";
+
 .home {
-  background: url("/img/hero-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  color: #000;
-  text-align: center;
-  padding: 0 20px;
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.5);
-    pointer-events: none;
-    z-index: 1;
-  }
-}
-
-.hero_title {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 10px;
-}
-
-.hero_subtitle {
-  color: #000;
-  display: inline;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
-
-.socialIcons {
-  a {
-    color: #000;
-    transition: color 0.3s ease;
-
-    &:hover {
-      color: #4caf50;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url("/img/hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: $slate-blue;
+    line-height: normal;
+    padding: 0 20px;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.5);
+        pointer-events: none;
+        z-index: 1;
     }
-  }
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        position: relative;
+        z-index: 2;
+        .hero_content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            .hero_title {
+                font-size: 4rem;
+                font-weight: 700;
+            }
+            .hero_subtitle {
+                font-size: 2rem;
+                font-weight: 500;
+            }
+        }
+        .hero_socialIcons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            transition: color 0.3s ease;
+            a {
+                transition: color 0.3s ease;
+                &:hover {
+                    color: $bright-blue;
+                }
+            }
+            svg {
+                transition: fill 0.3s ease;
+                fill: currentColor;
+            }
+        }
+    }
+    .mouseIcon {
+        position: absolute;
+        bottom: 20px;
+        transform: translateX(-50%);
+        animation: mouseMove 1.5s infinite;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        @keyframes mouseMove {
+            0% {
+              transform: translateY(0);
+            }
+            50% {
+              transform: translateY(-10px);
+            }
+            100% {
+              transform: translateY(0);
+            }
+        }
+    }
 }
