@@ -1,14 +1,9 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React from "react";
+import Typewriter from "typewriter-effect";
 import { Icon } from "@iconify/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { TextPlugin } from "gsap/TextPlugin";
-
 import styles from "./styles/Home.module.scss";
-
-gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
 interface HomeProps {
   id: string;
@@ -17,33 +12,6 @@ interface HomeProps {
 const words = ["Developer", "Freelancer", "Photographer"];
 
 const Home: React.FC<HomeProps> = ({ id }) => {
-  const textRef = useRef<HTMLSpanElement | null>(null);
-
-  useEffect(() => {
-    const el = textRef.current;
-
-    if (el) {
-      const tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
-
-      words.forEach((word) => {
-        tl.to(el, {
-          text: word,
-          duration: word.length * 0.2,
-          ease: "none",
-        })
-          .to(el, {
-            duration: 2,
-            ease: "none",
-          })
-          .to(el, {
-            text: "",
-            duration: 1,
-            ease: "none",
-          });
-      });
-    }
-  }, []);
-
   return (
     <section
       id={id}
@@ -53,10 +21,28 @@ const Home: React.FC<HomeProps> = ({ id }) => {
         <h1 className={`text-4xl md:text-6xl font-bold ${styles.hero_title}`}>
           I&apos;m{" "}
           <span
-            ref={textRef}
             className={`text-4xl md:text-6xl font-bold inline-block ${styles.hero_subtitle}`}
           >
-            {/* GSAP will handle the text */}
+            <Typewriter
+              onInit={(typewriter) => {
+                typewriter
+                  .typeString("Developer")
+                  .pauseFor(2000)
+                  .deleteAll()
+                  .typeString("Freelancer")
+                  .pauseFor(2000)
+                  .deleteAll()
+                  .typeString("Photographer")
+                  .pauseFor(2000)
+                  .start();
+              }}
+              options={{
+                delay: 100,
+                deleteSpeed: 100,
+                loop: true,
+                autoStart: true, 
+              }}
+            />
           </span>
         </h1>
         <p className="mt-4 text-lg md:text-xl">
