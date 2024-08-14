@@ -1,0 +1,58 @@
+@import "../../../styles/variables.scss";
+
+.about {
+    min-height: 100vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .about_content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        .about_headline {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .about_bigtitle {
+                position: absolute;
+                font-size: 7rem;
+                font-weight: bold;
+                color: rgb(0 0 0 / 10%);
+                z-index: -1;
+            }
+            .about_title {
+                font-size: 4rem;
+                font-weight: bold;
+                color: $slate-blue;
+            }
+        }
+        .about_paragraph {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 90px;
+            .about_image {
+                flex: 1;
+                img {
+                    filter: grayscale(100%);
+                    width: 100%;
+                    border-radius: 8px;
+                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                }
+            }
+            .about_description {
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+                flex: 3;
+                p {
+                    font-size: 1.15rem;
+                    font-weight: 600;
+                    color: $slate-blue;
+                }
+            }
+        }
+    }
+}
