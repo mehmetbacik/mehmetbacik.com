@@ -68,7 +68,7 @@ const Sidebar = () => {
           {[
             { name: "Home", icon: "mdi:home" },
             { name: "About", icon: "mdi:account" },
-            { name: "Resume", icon: "mdi:file-document" },
+            { name: "Experience", icon: "mdi:file-document" },
             { name: "Portfolio", icon: "mdi:briefcase" },
             { name: "Services", icon: "mdi:cog" },
             { name: "Contact", icon: "mdi:email" },
