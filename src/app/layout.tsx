@@ -1,7 +1,7 @@
 
 
 export const metadata = {
-  title: "Mehmet BACIK",
+  title: "Mehmet BACIK | Frontend Developer",
   description: "Personal portfolio website",
 };
 
