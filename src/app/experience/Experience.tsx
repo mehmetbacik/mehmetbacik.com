@@ -9,6 +9,7 @@ interface ExperienceItem {
   company: string;
   date: string;
   description: string;
+  technology: string;
   icon: string;
 }
 
@@ -19,6 +20,7 @@ const experienceData: ExperienceItem[] = [
     date: "Jan 2023 - Present",
     description:
       "Worked on various projects, developed responsive web applications, and optimized user experience.",
+    technology: "React.js - Vue.js",
     icon: "fa6-solid:briefcase",
   },
   {
@@ -27,6 +29,7 @@ const experienceData: ExperienceItem[] = [
     date: "Jun 2021 - Dec 2022",
     description:
       "Designed user-friendly interfaces and worked closely with developers to implement the designs.",
+    technology: "Figma - Sketch",
     icon: "fa6-solid:palette",
   },
   {
@@ -35,6 +38,7 @@ const experienceData: ExperienceItem[] = [
     date: "Jan 2020 - May 2021",
     description:
       "Provided freelance services in web development and design, working with a variety of clients.",
+    technology: "React.js - Tailwind CSS",
     icon: "fa6-solid:laptop-code",
   },
   {
@@ -43,6 +47,7 @@ const experienceData: ExperienceItem[] = [
     date: "Jul 2018 - Dec 2019",
     description:
       "Managed multiple projects simultaneously, leading cross-functional teams to deliver results on time.",
+    technology: "Jira - Confluence",
     icon: "fa6-solid:file",
   },
   {
@@ -51,6 +56,7 @@ const experienceData: ExperienceItem[] = [
     date: "Jun 2017 - Jun 2018",
     description:
       "Assisted with various tasks and gained hands-on experience in a dynamic startup environment.",
+    technology: "HTML - CSS",
     icon: "fa6-solid:user-graduate",
   },
 ];
@@ -59,8 +65,28 @@ interface ExperienceProps {
   id: string;
 }
 
+// Teknoloji isimlerini Iconify ikon adlarıyla eşleştiriyoruz
+const technologyIconMapping: { [key: string]: string } = {
+  "React.js": "logos:react",
+  "Vue.js": "logos:vue",
+  "Tailwind CSS": "logos:tailwindcss-icon",
+  Figma: "logos:figma",
+  Sketch: "logos:sketch",
+  Jira: "logos:jira",
+  Confluence: "logos:confluence",
+  HTML: "fa-brands:html5",
+  CSS: "fa-brands:css3",
+};
+
 const Experience: React.FC<ExperienceProps> = ({ id }) => {
+  const [selectedExperience, setSelectedExperience] = useState<number | null>(
+    null
+  );
   const [showAll, setShowAll] = useState(false);
+
+  const togglePopup = (index: number) => {
+    setSelectedExperience(selectedExperience === index ? null : index);
+  };
 
   const visibleExperiences = showAll
     ? experienceData
@@ -69,7 +95,7 @@ const Experience: React.FC<ExperienceProps> = ({ id }) => {
   return (
     <section id={id} className={`container mx-auto px-4 ${styles.experience}`}>
       <div className={styles.experience_content}>
-      <div className={styles.experience_headline}>
+        <div className={styles.experience_headline}>
           <h1 className={styles.experience_bigtitle}>Experience</h1>
           <h2 className={styles.experience_title}>Experience</h2>
         </div>
@@ -96,7 +122,62 @@ const Experience: React.FC<ExperienceProps> = ({ id }) => {
                   </div>
                   <h4 className="text-gray-600">{item.company}</h4>
                   <p className="text-gray-500 text-sm">{item.date}</p>
-                  <p className="text-gray-600 mt-2">{item.description}</p>
+                  <p className="text-gray-500 text-sm mt-3">{item.description}</p>
+                  <button
+                    onClick={() => togglePopup(index)}
+                    className="mt-4 flex items-center text-blue-500 hover:text-blue-700 transition-colors"
+                  >
+                    <Icon
+                      icon="fa6-solid:info-circle"
+                      width="20"
+                      height="20"
+                      className="mr-2"
+                    />
+                    Details
+                  </button>
+                  {selectedExperience === index && (
+                    <div
+                      className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-50 z-50"
+                      onClick={() => setSelectedExperience(null)}
+                    >
+                      <div
+                        className="relative bg-white p-6 rounded-lg shadow-lg w-11/12 md:w-4/12"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <button
+                          className="absolute top-3 right-3 text-gray-500 hover:text-gray-700"
+                          onClick={() => setSelectedExperience(null)}
+                        >
+                          <Icon icon="fa6-solid:xmark" width="24" height="24" />
+                        </button>
+                        <h3 className="text-lg font-semibold text-gray-700 mb-4">
+                          {item.title} @ {item.company}
+                        </h3>
+                        <p className="text-gray-600">{item.description}</p>
+                        <div className="mt-4">
+                          <h4 className="text-gray-700 font-semibold mb-2">
+                            Technologies Used:
+                          </h4>
+                          <ul>
+                            {item.technology.split(" - ").map((tech, i) => (
+                              <li key={i} className="flex items-center mb-2">
+                                <Icon
+                                  icon={
+                                    technologyIconMapping[tech] ||
+                                    "fa-solid:circle"
+                                  }
+                                  width="18"
+                                  height="18"
+                                  className="text-blue-500 mr-2"
+                                />
+                                <span className="text-gray-600">{tech}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                   <span
                     className={`absolute top-1/2 transform -translate-y-1/2 w-5 h-5 rounded-full bg-blue-500 border-2 border-white ${
                       index % 2 === 0 ? "-right-3" : "-left-3"
