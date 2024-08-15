@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { Icon } from "@iconify/react";
+import styles from "./styles/Experience.module.scss";
 
 interface ExperienceItem {
   title: string;
@@ -66,11 +67,12 @@ const Experience: React.FC<ExperienceProps> = ({ id }) => {
     : experienceData.slice(0, 3);
 
   return (
-    <section id={id} className="min-h-screen py-16 bg-gray-100">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
-          Experience
-        </h2>
+    <section id={id} className={`container mx-auto px-4 ${styles.experience}`}>
+      <div className={styles.experience_content}>
+      <div className={styles.experience_headline}>
+          <h1 className={styles.experience_bigtitle}>Experience</h1>
+          <h2 className={styles.experience_title}>Experience</h2>
+        </div>
         <div className="relative flex flex-col items-center before:content-[''] before:absolute before:w-1 before:h-full before:bg-blue-500 before:left-1/2 before:transform before:-translate-x-1/2">
           {visibleExperiences.map((item, index) => (
             <div
