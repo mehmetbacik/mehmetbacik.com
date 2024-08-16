@@ -2,81 +2,13 @@
 
 import React, { useState } from "react";
 import { Icon } from "@iconify/react";
+import Image from "next/image";
 import styles from "./styles/Experience.module.scss";
+import { experienceData, technologyIconMapping } from "@/data/experienceData";
 
-interface ExperienceItem {
-  title: string;
-  company: string;
-  date: string;
-  description: string;
-  technology: string;
-  icon: string;
-}
-
-const experienceData: ExperienceItem[] = [
-  {
-    title: "Frontend Developer",
-    company: "Tech Company",
-    date: "Jan 2023 - Present",
-    description:
-      "Worked on various projects, developed responsive web applications, and optimized user experience.",
-    technology: "React.js - Vue.js",
-    icon: "fa6-solid:briefcase",
-  },
-  {
-    title: "UI/UX Designer",
-    company: "Creative Studio",
-    date: "Jun 2021 - Dec 2022",
-    description:
-      "Designed user-friendly interfaces and worked closely with developers to implement the designs.",
-    technology: "Figma - Sketch",
-    icon: "fa6-solid:palette",
-  },
-  {
-    title: "Freelancer",
-    company: "Self-employed",
-    date: "Jan 2020 - May 2021",
-    description:
-      "Provided freelance services in web development and design, working with a variety of clients.",
-    technology: "React.js - Tailwind CSS",
-    icon: "fa6-solid:laptop-code",
-  },
-  {
-    title: "Project Manager",
-    company: "Global Corp",
-    date: "Jul 2018 - Dec 2019",
-    description:
-      "Managed multiple projects simultaneously, leading cross-functional teams to deliver results on time.",
-    technology: "Jira - Confluence",
-    icon: "fa6-solid:file",
-  },
-  {
-    title: "Intern",
-    company: "Start-Up Inc.",
-    date: "Jun 2017 - Jun 2018",
-    description:
-      "Assisted with various tasks and gained hands-on experience in a dynamic startup environment.",
-    technology: "HTML - CSS",
-    icon: "fa6-solid:user-graduate",
-  },
-];
-
-interface ExperienceProps {
+export interface ExperienceProps {
   id: string;
 }
-
-// Teknoloji isimlerini Iconify ikon adlarıyla eşleştiriyoruz
-const technologyIconMapping: { [key: string]: string } = {
-  "React.js": "logos:react",
-  "Vue.js": "logos:vue",
-  "Tailwind CSS": "logos:tailwindcss-icon",
-  Figma: "logos:figma",
-  Sketch: "logos:sketch",
-  Jira: "logos:jira",
-  Confluence: "logos:confluence",
-  HTML: "fa-brands:html5",
-  CSS: "fa-brands:css3",
-};
 
 const Experience: React.FC<ExperienceProps> = ({ id }) => {
   const [selectedExperience, setSelectedExperience] = useState<number | null>(
@@ -110,19 +42,22 @@ const Experience: React.FC<ExperienceProps> = ({ id }) => {
               <div className="w-full md:w-6/12 px-4">
                 <div className="bg-white p-4 md:p-6 rounded-lg shadow-md relative">
                   <div className="flex items-center mb-2">
-                    <Icon
-                      icon={item.icon}
-                      className="text-blue-500"
-                      width="24"
-                      height="24"
+                    <Image
+                      src={item.logo}
+                      alt={`${item.company} Logo`}
+                      width={24}
+                      height={24}
+                      className="mr-2"
                     />
-                    <h3 className="text-lg font-semibold ml-2 text-gray-700">
+                    <h3 className="text-lg font-semibold text-gray-700">
                       {item.title}
                     </h3>
                   </div>
                   <h4 className="text-gray-600">{item.company}</h4>
                   <p className="text-gray-500 text-sm">{item.date}</p>
-                  <p className="text-gray-500 text-sm mt-3">{item.description}</p>
+                  <p className="text-gray-500 text-sm mt-3">
+                    {item.description}
+                  </p>
                   <button
                     onClick={() => togglePopup(index)}
                     className="mt-4 flex items-center text-blue-500 hover:text-blue-700 transition-colors"
