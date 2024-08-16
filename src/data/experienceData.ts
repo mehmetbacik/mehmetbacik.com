@@ -10,7 +10,7 @@ export const experienceData: ExperienceItem[] = [
     applying Agile methodologies to optimize workflows. My work involved managing frontend architecture, improving code quality, 
     and enhancing user experience across multiple challenging projects.`,
     technology:
-      "React.js - Typescript - Next.js - Vite - React Router - Redux - SWR - SASS - TailwindCSS - HTML - CSS - Javascript - Node.js - npm - Swagger - Git - Azure Devops",
+      "React.js - Typescript - Next.js - Vite - React Router - Redux - SWR - SASS - TailwindCSS - HTML - CSS - Javascript - Node.js - npm - Swagger - Git - Visual Studio Code - Azure Devops",
     logo: "/img/ekspar.jpg",
   },
   {
@@ -25,7 +25,7 @@ export const experienceData: ExperienceItem[] = [
       I utilized Agile methodologies to streamline development processes and deliver innovative features that met both client expectations 
       and industry standards.`,
     technology:
-      "HTML - CSS - Javascript - Yarn - SVN(Subversion) - Python - Docker - Radar",
+      "HTML - CSS - Javascript - Yarn - SVN(Subversion) - Python - Docker - BBEdit - Xcode - Visual Studio Code - Radar",
     logo: "/img/hogarth.jpg",
   },
   {
@@ -39,25 +39,29 @@ export const experienceData: ExperienceItem[] = [
     cross-functional teams to integrate with backend systems and third-party services, aiming to drive user engagement and conversion rates 
     through innovative features that met market demands and business goals.`,
     technology:
-      "Vue.js - Angular - Vue Router - Vuex - SASS - Bootstrap - HTML - CSS - Javascript - Jquery - PHP - MySQL - Node.js - npm - Figma - Sketch - Adobe Xd - Zeplin - Trello",
+      "Vue.js - Angular - Vue Router - Vuex - SASS - Bootstrap - HTML - CSS - Javascript - Jquery - PHP - MySQL - Node.js - npm - Figma - Sketch - Adobe Xd - Zeplin - Visual Studio Code - Trello",
     logo: "/img/tsoft.jpg",
   },
   {
     title: "Software Developer",
     company: "Model",
     date: "Jun 2015 - Aug 2015",
-    description:
-      "Managed multiple projects simultaneously, leading cross-functional teams to deliver results on time.",
-    technology: "Jira - Confluence",
+    description: `As a Software Developer in the ERP industry, I specialized in modular design and data integration within ERP systems to 
+    streamline business processes and enhance operational efficiency. I developed customized software solutions tailored to meet the unique 
+    needs of businesses, optimizing workflows and improving overall system performance. My role involved designing and implementing scalable 
+    modules, integrating diverse data sources, and ensuring seamless interaction between various components of the ERP system to support 
+    business operations effectively.`,
+    technology: "C - MySQL - SublimeText",
     logo: "/img/model.jpg",
   },
   {
     title: "Intern",
     company: "T-Soft",
     date: "Jun 2014 - Sep 2014",
-    description:
-      "Assisted with various tasks and gained hands-on experience in a dynamic startup environment.",
-    technology: "HTML - CSS",
+    description: `As a Intern in the e-commerce industry, I helped develop user-friendly web interfaces and assist with maintaining product 
+    pages and checkout processes. My tasks included coding, testing, and debugging frontend components, as well as supporting integration with 
+    backend systems. This role provided me with valuable experience in enhancing web performance and usability.`,
+    technology: "HTML - CSS - PHP - MySQL - NotePad++ - AdobePhotoshop",
     logo: "/img/tsoft.jpg",
   },
 ];
@@ -84,6 +88,7 @@ export const technologyIconMapping: { [key: string]: string } = {
   "Node.js": "logos:nodejs-icon",
   Python: "logos:python",
   PHP: "logos:php",
+  C: "logos:c",
   MySQL: "logos:mysql",
   npm: "logos:npm-icon",
   Yarn: "logos:yarn",
@@ -92,12 +97,16 @@ export const technologyIconMapping: { [key: string]: string } = {
   Docker: "logos:docker-icon",
   Swagger: "logos:swagger",
   "Azure Devops": "cib:azure-devops",
-  Radar: "arcticons:radarscope",
+  Radar: "logos:apple-app-store",
   Trello: "logos:trello",
   Figma: "logos:figma",
   Sketch: "logos:sketch",
   "Adobe Xd": "logos:adobe-xd",
   Zeplin: "logos:zeplin",
-  Jira: "logos:jira",
-  Confluence: "logos:confluence",
+  "Visual Studio Code": "logos:visual-studio-code",
+  Xcode: "logos:xcode",
+  BBEdit: "logos:apple-app-store",
+  SublimeText: "logos:sublimetext-icon",
+  "NotePad++": "simple-icons:notepadplusplus",
+  AdobePhotoshop: "logos:adobe-photoshop",
 };
