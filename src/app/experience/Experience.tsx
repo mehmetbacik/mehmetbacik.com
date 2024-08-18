@@ -69,17 +69,18 @@ const Experience: React.FC<ExperienceProps> = ({ id }) => {
                         const technologies = item.technology.split(" - ");
                         const visibleTechnologies = technologies.slice(0, 2);
                         const remainingTechnologies = technologies.length - 2;
-
                         return (
-                          <li className="flex items-center mb-2">
+                          <li
+                            className={styles.experience_card_technologies_item}
+                          >
                             {visibleTechnologies.map((tech, i) => (
-                              <span key={i} className="text-gray-600">
+                              <span key={i}>
                                 {tech}
                                 {i < visibleTechnologies.length - 1 && ", "}
                               </span>
                             ))}
                             {remainingTechnologies > 0 && (
-                              <span className="text-gray-600 ml-2">
+                              <span className={styles.remaining_technologies}>
                                 and +{remainingTechnologies} skills
                               </span>
                             )}
@@ -89,33 +90,36 @@ const Experience: React.FC<ExperienceProps> = ({ id }) => {
                     </ul>
                   </div>
                 </div>
-
                 {selectedExperience === index && (
                   <div
-                    className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-50 z-50"
+                    className={`bg-black bg-opacity-50 ${styles.experience_popup}`}
                     onClick={() => setSelectedExperience(null)}
                   >
                     <div
-                      className="relative bg-white p-6 rounded-lg shadow-lg w-11/12 md:w-4/12"
+                      className={`shadow-lg w-11/12 md:w-4/12 ${styles.experience_popup_content}`}
                       onClick={(e) => e.stopPropagation()}
                     >
                       <button
-                        className="absolute top-3 right-3 text-gray-500 hover:text-gray-700"
+                        className={`text-gray-500 hover:text-gray-700 ${styles.close_button}`}
                         onClick={() => setSelectedExperience(null)}
                       >
                         <Icon icon="fa6-solid:xmark" width="24" height="24" />
                       </button>
-                      <h3 className="text-lg font-semibold text-gray-700 mb-4">
+                      <h3 className={styles.experience_popup_title}>
                         {item.title} @ {item.company}
                       </h3>
-                      <p className="text-gray-600">{item.description}</p>
-                      <div className="mt-4">
-                        <h4 className="text-gray-700 font-semibold mb-2">
+                      <p className={styles.experience_popup_description}>
+                        {item.description}
+                      </p>
+                      <div className={styles.experience_popup_tech_used}>
+                        <h4 className={styles.tech_used_title}>
                           Technologies Used:
                         </h4>
-                        <ul className="grid grid-cols-2 gap-2 sm:grid-cols-2 md:grid-cols-3">
+                        <ul
+                          className={`grid-cols-2 sm:grid-cols-2 md:grid-cols-3 ${styles.tech_used_list}`}
+                        >
                           {item.technology.split(" - ").map((tech, i) => (
-                            <li key={i} className="flex items-center mb-2">
+                            <li key={i} className={styles.tech_used_list_item}>
                               <Icon
                                 icon={
                                   technologyIconMapping[tech] ||
@@ -123,9 +127,9 @@ const Experience: React.FC<ExperienceProps> = ({ id }) => {
                                 }
                                 width="18"
                                 height="18"
-                                className="text-blue-500 mr-2"
+                                className="text-blue-500"
                               />
-                              <span className="text-gray-600">{tech}</span>
+                              <span className={styles.tech_used_item_title}>{tech}</span>
                             </li>
                           ))}
                         </ul>
@@ -137,14 +141,14 @@ const Experience: React.FC<ExperienceProps> = ({ id }) => {
             </div>
           ))}
         </div>
-        <div className="text-center mt-8">
-          <button
-            onClick={() => setShowAll(!showAll)}
-            className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300"
-          >
-            {showAll ? "Show Less" : "Show More"}
-          </button>
-        </div>
+      </div>
+      <div className={styles.experience_showall}>
+        <button
+          onClick={() => setShowAll(!showAll)}
+          className={styles.showall_button}
+        >
+          {showAll ? "Show Less" : "Show More"}
+        </button>
       </div>
     </section>
   );
