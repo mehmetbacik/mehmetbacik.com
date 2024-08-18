@@ -14,33 +14,37 @@ const Sidebar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    const hash = pathname.split("#")[1];
-    if (hash) {
-      setActiveId(hash);
-      const element = document.getElementById(hash);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth", block: "start" });
+    const handleHashChange = () => {
+      const hash = pathname.split("#")[1];
+      if (hash) {
+        setActiveId(hash);
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
       }
-    }
+    };
+  
+    handleHashChange();
   }, [pathname]);
 
   useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll("section");
       let currentId: string | null = "home";
-
+  
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
-        if (rect.top <= 0 && rect.bottom >= 0) {
+        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
           currentId = section.getAttribute("id");
         }
       });
-
+  
       setActiveId(currentId || "home");
     };
-
+  
     window.addEventListener("scroll", handleScroll);
-
+  
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
