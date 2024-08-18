@@ -20,6 +20,13 @@ const Experience: React.FC<ExperienceProps> = ({ id }) => {
     setSelectedExperience(selectedExperience === index ? null : index);
   };
 
+  const truncateText = (text: string, limit: number) => {
+    if (text.length > limit) {
+      return text.slice(0, limit) + "...";
+    }
+    return text;
+  };
+
   const visibleExperiences = showAll
     ? experienceData
     : experienceData.slice(0, 3);
@@ -31,10 +38,14 @@ const Experience: React.FC<ExperienceProps> = ({ id }) => {
           <h1 className={styles.experience_bigtitle}>Experience</h1>
           <h2 className={styles.experience_title}>Experience</h2>
         </div>
-        <div className="flex flex-col space-y-8">
+        <div className="flex flex-col gap-6">
           {visibleExperiences.map((item, index) => (
-            <div key={index} className="w-full px-4 mx-auto">
-              <div className="bg-white p-4 md:p-6 rounded-lg shadow-md relative">
+            <div
+              key={index}
+              className="w-full card-area cursor-pointer rounded-lg shadow-md hover:bg-gray-200 transition-colors duration-300 card-area"
+              onClick={() => togglePopup(index)}
+            >
+              <div className="p-4 md:p-6 relative">
                 <div className="flex items-center gap-6 mb-2">
                   <Image
                     src={item.logo}
@@ -49,20 +60,35 @@ const Experience: React.FC<ExperienceProps> = ({ id }) => {
                     </h3>
                     <h4 className="text-gray-600">{item.company}</h4>
                     <p className="text-gray-500 text-sm">{item.date}</p>
+                    <p className="text-gray-600">
+                      {truncateText(item.description, 100)}{" "}
+                    </p>
+                    <ul className="mt-2">
+                      {(() => {
+                        const technologies = item.technology.split(" - ");
+                        const visibleTechnologies = technologies.slice(0, 2);
+                        const remainingTechnologies = technologies.length - 2;
+
+                        return (
+                          <li className="flex items-center mb-2">
+                            {visibleTechnologies.map((tech, i) => (
+                              <span key={i} className="text-gray-600">
+                                {tech}
+                                {i < visibleTechnologies.length - 1 && ", "}
+                              </span>
+                            ))}
+                            {remainingTechnologies > 0 && (
+                              <span className="text-gray-600 ml-2">
+                                and +{remainingTechnologies} skills
+                              </span>
+                            )}
+                          </li>
+                        );
+                      })()}
+                    </ul>
                   </div>
                 </div>
-                <button
-                  onClick={() => togglePopup(index)}
-                  className="mt-4 flex items-center text-blue-500 hover:text-blue-700 transition-colors"
-                >
-                  <Icon
-                    icon="fa6-solid:info-circle"
-                    width="20"
-                    height="20"
-                    className="mr-2"
-                  />
-                  Details
-                </button>
+
                 {selectedExperience === index && (
                   <div
                     className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-50 z-50"
@@ -86,9 +112,9 @@ const Experience: React.FC<ExperienceProps> = ({ id }) => {
                         <h4 className="text-gray-700 font-semibold mb-2">
                           Technologies Used:
                         </h4>
-                        <ul>
+                        <div className="grid grid-cols-2 gap-2 sm:grid-cols-2 md:grid-cols-3">
                           {item.technology.split(" - ").map((tech, i) => (
-                            <li key={i} className="flex items-center mb-2">
+                            <span key={i} className="flex items-center mb-2">
                               <Icon
                                 icon={
                                   technologyIconMapping[tech] ||
@@ -99,9 +125,9 @@ const Experience: React.FC<ExperienceProps> = ({ id }) => {
                                 className="text-blue-500 mr-2"
                               />
                               <span className="text-gray-600">{tech}</span>
-                            </li>
+                            </span>
                           ))}
-                        </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
