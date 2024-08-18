@@ -38,32 +38,33 @@ const Experience: React.FC<ExperienceProps> = ({ id }) => {
           <h1 className={styles.experience_bigtitle}>Experience</h1>
           <h2 className={styles.experience_title}>Experience</h2>
         </div>
-        <div className="flex flex-col gap-6">
+        <div className={styles.experience_list}>
           {visibleExperiences.map((item, index) => (
             <div
               key={index}
-              className="w-full card-area cursor-pointer rounded-lg shadow-md hover:bg-gray-200 transition-colors duration-300 card-area"
+              className={styles.experience_list_item}
               onClick={() => togglePopup(index)}
             >
-              <div className="p-4 md:p-6 relative">
-                <div className="flex items-center gap-6 mb-2">
+              <div className={styles.experience_card}>
+                <div className={styles.experience_card_content}>
                   <Image
                     src={item.logo}
                     alt={`${item.company} Logo`}
                     width={80}
                     height={80}
-                    className="object-contain"
                   />
-                  <div className="ml-4">
-                    <h3 className="text-lg font-semibold text-gray-700">
+                  <div className={styles.experience_card_text}>
+                    <h3 className={styles.experience_card_title}>
                       {item.title}
                     </h3>
-                    <h4 className="text-gray-600">{item.company}</h4>
-                    <p className="text-gray-500 text-sm">{item.date}</p>
-                    <p className="text-gray-600">
+                    <h4 className={styles.experience_card_company}>
+                      {item.company}
+                    </h4>
+                    <p className={styles.experience_card_date}>{item.date}</p>
+                    <p className={styles.experience_card_description}>
                       {truncateText(item.description, 100)}{" "}
                     </p>
-                    <ul className="mt-2">
+                    <ul className={styles.experience_card_technologies}>
                       {(() => {
                         const technologies = item.technology.split(" - ");
                         const visibleTechnologies = technologies.slice(0, 2);
@@ -112,9 +113,9 @@ const Experience: React.FC<ExperienceProps> = ({ id }) => {
                         <h4 className="text-gray-700 font-semibold mb-2">
                           Technologies Used:
                         </h4>
-                        <div className="grid grid-cols-2 gap-2 sm:grid-cols-2 md:grid-cols-3">
+                        <ul className="grid grid-cols-2 gap-2 sm:grid-cols-2 md:grid-cols-3">
                           {item.technology.split(" - ").map((tech, i) => (
-                            <span key={i} className="flex items-center mb-2">
+                            <li key={i} className="flex items-center mb-2">
                               <Icon
                                 icon={
                                   technologyIconMapping[tech] ||
@@ -125,9 +126,9 @@ const Experience: React.FC<ExperienceProps> = ({ id }) => {
                                 className="text-blue-500 mr-2"
                               />
                               <span className="text-gray-600">{tech}</span>
-                            </span>
+                            </li>
                           ))}
-                        </div>
+                        </ul>
                       </div>
                     </div>
                   </div>
