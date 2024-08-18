@@ -1,0 +1,81 @@
+@import "../../../styles/variables.scss";
+
+.education {
+    min-height: 100vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    flex-direction: column;
+    gap: 40px;
+    .education_content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        .education_headline {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .education_bigtitle {
+                position: absolute;
+                font-size: 7rem;
+                font-weight: bold;
+                color: rgb(0 0 0 / 10%);
+                z-index: -1;
+            }
+            .education_title {
+                font-size: 4rem;
+                font-weight: bold;
+                color: $slate-blue;
+            }
+        }
+        .education_list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            .education_list_item {
+                width: 100%;
+                cursor: pointer;
+                border-radius: 8px;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                transition-duration: 300ms;
+                &:hover {
+                    background-color: $pale-gray;
+                }
+                .education_card {
+                    position: relative;
+                    padding: 20px;
+                    .education_card_content {
+                        display: flex;
+                        align-items: center;
+                        gap: 25px;
+                        img {
+                            object-fit: contain;
+                        }
+                        .education_card_text {
+                            .education_card_school {
+                                font-size: 1.2rem;
+                                color: $slate-blue;
+                                font-weight: 700;
+                            }
+                            .education_card_content {
+                                font-size: 1rem;
+                                color: $slate-blue;
+                                font-weight: 500;
+                            }
+                            .education_card_date {
+                                font-size: 0.9rem;
+                                color: $gray;
+                                font-weight: 500;
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

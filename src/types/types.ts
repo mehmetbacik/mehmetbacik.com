@@ -6,3 +6,11 @@ export interface ExperienceItem {
     technology: string;
     logo: string;
 }
+
+export interface EducationItem {
+    school: string;
+    degree: string;
+    study: string;
+    date: string;
+    logo: string;
+}
