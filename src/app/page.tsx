@@ -5,7 +5,9 @@ import Experience from "@/app/experience/Experience";
 import Portfolio from "@/app/portfolio/Portfolio";
 import Services from "@/app/services/Services";
 import Contact from "@/app/contact/Contact";
+import Education from "@/app/education/Education";
 import "@/styles/styles.scss";
+
 
 export default function MainPage() {
   return (
@@ -15,6 +17,7 @@ export default function MainPage() {
         <Home id="home" />
         <About id="about" />
         <Experience id="experience" />
+        <Education id="education" />
         <Portfolio id="portfolio" />
         <Services id="services" />
         <Contact id="contact" />

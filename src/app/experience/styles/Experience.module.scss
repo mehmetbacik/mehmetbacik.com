@@ -163,6 +163,7 @@
             border-radius: 4px;
             padding: 8px 10px;
             transition-duration: 300ms;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
             &:hover {
                 background-color: $very-light-gray;
             }
