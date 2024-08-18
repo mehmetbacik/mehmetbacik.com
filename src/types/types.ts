@@ -14,3 +14,8 @@ export interface EducationItem {
     date: string;
     logo: string;
 }
+
+export interface TechnologyItem {
+    name: string;
+    icon: string;
+}
