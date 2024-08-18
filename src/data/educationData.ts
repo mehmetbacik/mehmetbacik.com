@@ -23,10 +23,10 @@ export const educationData: EducationItem[] = [
     logo: "/img/anadoluuni_logo.jpg",
   },
   {
-    school: "Inonu High School",
+    school: "Inonu Technical High School",
     degree: "High School Degree",
     study: "Information Technology (Web Design and Programming)",
-    date: "20122 - 2015",
+    date: "2012 - 2015",
     logo: "/img/inonu_logo.jpg",
   },
 ];

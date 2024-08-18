@@ -3,7 +3,7 @@ import Home from "@/app/home/Home";
 import About from "@/app/about/About";
 import Experience from "@/app/experience/Experience";
 import Portfolio from "@/app/portfolio/Portfolio";
-import Services from "@/app/services/Services";
+import Technology from "@/app/technology/Technology";
 import Contact from "@/app/contact/Contact";
 import Education from "@/app/education/Education";
 import "@/styles/styles.scss";
@@ -18,8 +18,8 @@ export default function MainPage() {
         <About id="about" />
         <Experience id="experience" />
         <Education id="education" />
+        <Technology id="technology" />
         <Portfolio id="portfolio" />
-        <Services id="services" />
         <Contact id="contact" />
       </main>
     </>
