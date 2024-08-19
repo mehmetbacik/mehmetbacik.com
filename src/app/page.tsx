@@ -2,7 +2,7 @@ import Sidebar from "@/components/Sidebar/Sidebar";
 import Home from "@/app/home/Home";
 import About from "@/app/about/About";
 import Experience from "@/app/experience/Experience";
-import Portfolio from "@/app/portfolio/Portfolio";
+import Project from "@/app/project/Project";
 import Technology from "@/app/technology/Technology";
 import Contact from "@/app/contact/Contact";
 import Education from "@/app/education/Education";
@@ -19,7 +19,7 @@ export default function MainPage() {
         <Experience id="experience" />
         <Education id="education" />
         <Technology id="technology" />
-        <Portfolio id="portfolio" />
+        <Project id="project" />
         <Contact id="contact" />
       </main>
     </>

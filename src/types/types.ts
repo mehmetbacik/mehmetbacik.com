@@ -19,3 +19,15 @@ export interface TechnologyItem {
     name: string;
     icon: string;
 }
+
+export interface Projects {
+    id: string;
+    title: string;
+    description: string;
+    image: string;
+    tags: string[];
+  }
+  
+  export interface ProjectsData {
+    [key: string]: Projects[];
+  }

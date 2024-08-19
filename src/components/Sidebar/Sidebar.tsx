@@ -75,7 +75,7 @@ const Sidebar = () => {
             { name: "Experience", icon: "mdi:file-document" },
             { name: "Education", icon: "mdi:school" },
             { name: "Technology", icon: "mdi:cog" },
-            { name: "Portfolio", icon: "mdi:briefcase" },
+            { name: "Project", icon: "mdi:briefcase" },
             { name: "Contact", icon: "mdi:email" },
           ].map((item) => (
             <li
