@@ -32,7 +32,6 @@ export const technologyData = {
     { name: "Docker", icon: "logos:docker-icon" },
     { name: "Git", icon: "logos:git-icon" },
     { name: "Azure Devops", icon: "cib:azure-devops" },
-    { name: "SVN", icon: "logos:subversion" },
     { name: "npm", icon: "logos:npm-icon" },
     { name: "Yarn", icon: "logos:yarn" },
   ],
@@ -66,5 +65,8 @@ export const technologyData = {
     { name: "Opencart", icon: "logos:opencart" },
     { name: "Blogger", icon: "logos:blogger" },
   ],
-  version_control: [{ name: "Github", icon: "logos:github-icon" }],
+  version_control: [
+    { name: "Github", icon: "logos:github-icon" },
+    { name: "SVN", icon: "logos:subversion" },
+  ],
 };

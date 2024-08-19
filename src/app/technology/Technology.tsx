@@ -17,31 +17,28 @@ const Technology: React.FC<TechnologyProps> = ({ id }) => {
           <h1 className={styles.technology_bigtitle}>TechStack</h1>
           <h2 className={styles.technology_title}>Tech Stack</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 auto-rows-fr">
+        <div className={`grid-cols-1 md:grid-cols-3 ${styles.technology_list}`}>
           {Object.entries(technologyData).map(([group, techList], index) => (
-            <div
-              key={index}
-              className="p-4 bg-gray-100 rounded-lg shadow-lg flex flex-col h-full"
-            >
-              <h3 className="text-lg font-semibold text-center mb-4">
+            <div key={index} className={styles.technology_card}>
+              <h3 className={styles.technology_card_title}>
                 {group
                   .split("_")
                   .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
                   .join(" ")}
               </h3>
-              <div className="grid grid-cols-4 gap-4 flex-grow">
+              <div className={styles.technology_card_icons}>
                 {techList.map((tech, techIndex) => (
                   <div
                     key={techIndex}
-                    className="flex flex-col items-center justify-center"
+                    className={styles.technology_card_icons_content}
                   >
                     <Icon
                       icon={tech.icon}
                       width={40}
                       height={40}
-                      className="text-blue-700 mb-2"
+                      className="text-blue-700"
                     />
-                    <span className="text-sm text-gray-700 text-center">
+                    <span>
                       {tech.name}
                     </span>
                   </div>
