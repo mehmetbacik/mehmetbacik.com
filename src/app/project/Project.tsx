@@ -17,7 +17,7 @@ const Project: React.FC<ProjectProps> = ({ id }) => {
   const [activeTab, setActiveTab] = useState<string>("frontend");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const itemsPerPage = 6;
+  const itemsPerPage = 8;
 
   const tabs = Object.keys(projectsData);
   const allTags = Array.from(
@@ -86,19 +86,15 @@ const Project: React.FC<ProjectProps> = ({ id }) => {
               breakpoints={{
                 "@0.00": {
                   slidesPerView: 3,
-                  spaceBetween: 10,
                 },
                 "@0.75": {
                   slidesPerView: 4,
-                  spaceBetween: 20,
                 },
                 "@1.00": {
                   slidesPerView: 5,
-                  spaceBetween: 40,
                 },
                 "@1.50": {
-                  slidesPerView: 10,
-                  spaceBetween: 50,
+                  slidesPerView: 12,
                 },
               }}
               freeMode={true}
