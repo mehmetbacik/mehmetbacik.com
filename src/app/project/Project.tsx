@@ -14,7 +14,7 @@ interface ProjectProps {
 }
 
 const Project: React.FC<ProjectProps> = ({ id }) => {
-  const [activeTab, setActiveTab] = useState<string>("web");
+  const [activeTab, setActiveTab] = useState<string>("frontend");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const itemsPerPage = 6;
@@ -122,7 +122,7 @@ const Project: React.FC<ProjectProps> = ({ id }) => {
               ))}
             </Swiper>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {paginatedProjects.map((project) => (
               <a
                 key={project.id}
@@ -143,7 +143,9 @@ const Project: React.FC<ProjectProps> = ({ id }) => {
                 <div className="p-4">
                   <h3 className="text-lg font-semibold">{project.title}</h3>
                   <p className="text-sm text-gray-600 mt-2">
-                    {project.description}
+                    {project.description.length > 100
+                      ? `${project.description.slice(0, 100)}...`
+                      : project.description}
                   </p>
                   <div className="mt-2">
                     {project.tags.map((tag) => (
