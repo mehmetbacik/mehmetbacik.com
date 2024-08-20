@@ -23,6 +23,7 @@ export interface TechnologyItem {
 export interface Projects {
     id: string;
     title: string;
+    url: string;
     description: string;
     image: string;
     tags: string[];

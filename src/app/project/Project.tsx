@@ -4,6 +4,10 @@ import React, { useState } from "react";
 import Image from "next/image";
 import styles from "./styles/Project.module.scss";
 import { projectsData } from "@/data/projectData";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 
 interface ProjectProps {
   id: string;
@@ -12,6 +16,8 @@ interface ProjectProps {
 const Project: React.FC<ProjectProps> = ({ id }) => {
   const [activeTab, setActiveTab] = useState<string>("web");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const itemsPerPage = 6;
 
   const tabs = Object.keys(projectsData);
   const allTags = Array.from(
@@ -24,6 +30,7 @@ const Project: React.FC<ProjectProps> = ({ id }) => {
         ? prevTags.filter((t) => t !== tag)
         : [...prevTags, tag]
     );
+    setCurrentPage(1);
   };
 
   const filteredProjects = projectsData[activeTab].filter((project) =>
@@ -31,6 +38,16 @@ const Project: React.FC<ProjectProps> = ({ id }) => {
       ? project.tags.some((tag) => selectedTags.includes(tag))
       : true
   );
+
+  const totalPages = Math.ceil(filteredProjects.length / itemsPerPage);
+  const paginatedProjects = filteredProjects.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+  };
 
   return (
     <section id={id} className={`container mx-auto px-4 ${styles.project}`}>
@@ -52,32 +69,67 @@ const Project: React.FC<ProjectProps> = ({ id }) => {
                 onClick={() => {
                   setActiveTab(tab);
                   setSelectedTags([]);
+                  setCurrentPage(1);
                 }}
               >
                 {tab.charAt(0).toUpperCase() + tab.slice(1)}
               </button>
             ))}
           </div>
-          <div className="mb-4 flex flex-wrap gap-2 mt-4">
-            {allTags.map((tag) => (
-              <button
-                key={tag}
-                className={`px-4 py-2 border rounded-md text-sm ${
-                  selectedTags.includes(tag)
-                    ? "bg-blue-500 text-white"
-                    : "bg-white text-blue-500 border-blue-500"
-                }`}
-                onClick={() => handleTagFilter(tag)}
-              >
-                {tag}
-              </button>
-            ))}
+          <div className="mb-4 mt-4">
+            <Swiper
+              slidesPerView={1}
+              spaceBetween={10}
+              pagination={{
+                clickable: true,
+              }}
+              breakpoints={{
+                "@0.00": {
+                  slidesPerView: 3,
+                  spaceBetween: 10,
+                },
+                "@0.75": {
+                  slidesPerView: 4,
+                  spaceBetween: 20,
+                },
+                "@1.00": {
+                  slidesPerView: 5,
+                  spaceBetween: 40,
+                },
+                "@1.50": {
+                  slidesPerView: 10,
+                  spaceBetween: 50,
+                },
+              }}
+              freeMode={true}
+              navigation={true}
+              modules={[Navigation]}
+              className="mySwiper"
+            >
+              {allTags.map((tag) => (
+                <SwiperSlide key={tag}>
+                  <button
+                    className={`px-4 py-2 border rounded-md text-sm ${
+                      selectedTags.includes(tag)
+                        ? "bg-blue-500 text-white"
+                        : "bg-white text-blue-500 border-blue-500"
+                    }`}
+                    onClick={() => handleTagFilter(tag)}
+                  >
+                    {tag}
+                  </button>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredProjects.map((project) => (
-              <div
+            {paginatedProjects.map((project) => (
+              <a
                 key={project.id}
-                className="bg-white rounded-lg shadow-lg overflow-hidden"
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-white rounded-lg shadow-lg overflow-hidden"
               >
                 <div className="relative w-full h-48">
                   <Image
@@ -104,9 +156,46 @@ const Project: React.FC<ProjectProps> = ({ id }) => {
                     ))}
                   </div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
+          {totalPages > 1 && (
+            <div className="flex justify-center items-center mt-6 space-x-2">
+              <button
+                className={`px-3 py-1 border rounded ${
+                  currentPage === 1 ? "opacity-50 cursor-not-allowed" : ""
+                }`}
+                onClick={() => handlePageChange(currentPage - 1)}
+                disabled={currentPage === 1}
+              >
+                &lt;
+              </button>
+              {Array.from({ length: totalPages }, (_, i) => (
+                <button
+                  key={i}
+                  className={`px-3 py-1 border rounded ${
+                    currentPage === i + 1
+                      ? "bg-blue-500 text-white"
+                      : "bg-white text-blue-500"
+                  }`}
+                  onClick={() => handlePageChange(i + 1)}
+                >
+                  {i + 1}
+                </button>
+              ))}
+              <button
+                className={`px-3 py-1 border rounded ${
+                  currentPage === totalPages
+                    ? "opacity-50 cursor-not-allowed"
+                    : ""
+                }`}
+                onClick={() => handlePageChange(currentPage + 1)}
+                disabled={currentPage === totalPages}
+              >
+                &gt;
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </section>
