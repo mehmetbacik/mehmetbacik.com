@@ -129,6 +129,41 @@ export const projectsData: ProjectsData = {
       image: "/project/project-image.jpg",
       tags: ["Vue.js", "CSS", "HTML", "Javascript"],
     },
+    {
+      id: "13",
+      title: "Cart App",
+      url: "https://github.com/mehmetbacik/cart-app",
+      description:
+        "Source code for a shopping cart app with page navigation and JSON data retrieval.",
+      image: "/project/project-image.jpg",
+      tags: ["Vue.js", "Vue Router", "CSS", "HTML", "Javascript"],
+    },
+    {
+      id: "14",
+      title: "Landing Page Localization",
+      url: "https://github.com/mehmetbacik/landing-page-localization",
+      description:
+        "Landing page with localization for Turkish and English, built for easy language switching.",
+      image: "/project/project-image.jpg",
+      tags: ["React.js", "TailwindCss"],
+    },
+    {
+      id: "15",
+      title: "Intro with Sign Up Form",
+      url: "https://github.com/mehmetbacik/intro-with-sign-up-form",
+      description: "Intro section with a sign-up form for user registration.",
+      image: "/project/project-image.jpg",
+      tags: ["React.js", "Formik", "Yup", "CSS"],
+    },
+    {
+      id: "16",
+      title: "Weather App",
+      url: "https://github.com/mehmetbacik/weather-app",
+      description:
+        "Weather app that provides weather updates and forecasts for various locations.",
+      image: "/project/project-image.jpg",
+      tags: ["React.js", "CSS"],
+    },
   ],
   backend: [
     {
@@ -213,6 +248,118 @@ export const projectsData: ProjectsData = {
         "Source code for a redesign project of the T3 Foundation's website, focusing on a new design approach.",
       image: "/project/project-image.jpg",
       tags: ["HTML", "CSS", "Javascript"],
+    },
+    {
+      id: "8",
+      title: "Time Tracking Dashboard",
+      url: "https://github.com/mehmetbacik/time-tracking-dashboard",
+      description:
+        "Source code for a user-friendly dashboard design for time tracking and management, with enhanced styling.",
+      image: "/project/project-image.jpg",
+      tags: ["HTML", "CSS", "Bootstrap", "Sass", "Javascript"],
+    },
+    {
+      id: "9",
+      title: "Fylo Landing Page",
+      url: "https://github.com/mehmetbacik/fylo-landing-page",
+      description:
+        "Source code for a modern, user-friendly landing page with a slide show and enhanced design.",
+      image: "/project/project-image.jpg",
+      tags: ["HTML", "CSS", "Bootstrap", "Sass", "Javascript"],
+    },
+    {
+      id: "10",
+      title: "SunnySide Agency Landing Page",
+      url: "https://github.com/mehmetbacik/sunnyside-agency-landing-page",
+      description:
+        "Source code for the visually appealing SunnySide Agency landing page design.",
+      image: "/project/project-image.jpg",
+      tags: ["HTML", "CSS", "Bootstrap", "Sass", "Javascript"],
+    },
+    {
+      id: "11",
+      title: "Bookmark Landing Page",
+      url: "https://github.com/mehmetbacik/bookmark-page",
+      description:
+        "Source code for a modern, visually appealing landing page with a slide show and enhanced design.",
+      image: "/project/project-image.jpg",
+      tags: ["HTML", "CSS", "Bootstrap", "Sass", "Javascript"],
+    },
+    {
+      id: "12",
+      title: "Redesign LinkedIn",
+      url: "https://github.com/mehmetbacik/redesign-linkedin",
+      description:
+        "Source code for a LinkedIn redesign project offering a fresh, modern user interface.",
+      image: "/project/project-image.jpg",
+      tags: ["HTML", "CSS", "Bootstrap", "Javascript"],
+    },
+    {
+      id: "13",
+      title: "Space Multi-Page Website",
+      url: "https://github.com/mehmetbacik/space-multi-page-website",
+      description:
+        "Source code for a space-themed multi-page website with a slide show and modern design.",
+      image: "/project/project-image.jpg",
+      tags: ["HTML", "CSS", "Sass", "Bootstrap", "Javascript"],
+    },
+    {
+      id: "14",
+      title: "Clipboard Page",
+      url: "https://github.com/mehmetbacik/clipboard-page",
+      description:
+        "Clipboard landing page with light/dark mode and a modern design.",
+      image: "/project/project-image.jpg",
+      tags: ["HTML", "CSS", "React.js", "Bootstrap"],
+    },
+  ],
+  erasmus: [
+    {
+      id: "1",
+      title: "ESR-European School Radio",
+      url: "https://europeanschoolradio.blogspot.com/",
+      description:
+        "Comenius - Education and Culture Lifelong Learning Programme",
+      image: "/project/project-image.jpg",
+      tags: [
+        "Grecee",
+        "Portugal",
+        "Turkiye",
+        "Germany",
+        "Norway",
+        "Czech Republic",
+        "Belgium",
+        "Bulgaria",
+        "Italy"
+      ],
+    },
+    {
+      id: "2",
+      title: "PEMCEAE - Promoting English as Means of Communication in European Adult Education",
+      url: "https://pemceae.blogspot.com/",
+      description:
+        "Grundtvig - Education and Culture DG Lifelong Learning Programme",
+      image: "/project/project-image.jpg",
+      tags: [
+        "Spain",
+        "Italy",
+        "Romania",
+        "Turkiye"
+      ],
+    },
+    {
+      id: "3",
+      title: "GOAL - Growing Outdoor Agrotourism Learning",
+      url: "https://tbssgoal.blogspot.com/",
+      description:
+        "Erasmus+ Project",
+      image: "/project/project-image.jpg",
+      tags: [
+        "Spain",
+        "Turkiye",
+        "Bulgaria",
+        "Slovenia"
+      ],
     },
   ],
 };
