@@ -62,6 +62,25 @@
         }
         .project_tags {
             margin: 25px 0px;
+            .project_tags_button {
+                padding: 5px 10px;
+                border: solid 1px $bright-blue;
+                background-color: $bright-blue;
+                color: $white;
+                border-radius: 5px;
+                font-size: 0.6rem;
+                font-weight: 500;
+                width: 100%;
+                transition-duration: 300ms;
+                &.active {
+                    color: $bright-blue;
+                    background-color: $white;
+                }
+                &:hover {
+                    color: $bright-blue;
+                    background-color: $white;
+                }
+            }
         }
     }
 }

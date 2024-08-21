@@ -1,17 +1,26 @@
-.tagSwiper {
-    padding: 0px 25px;
-    .swiper-wrapper {
-        .swiper-slide {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    }
-    .swiper-button-next {
-        right: 0px;
-    }
+@import "variables";
 
-      .swiper-button-prev {
-        left: 0px;
+#project {
+    .tagSwiper {
+        .swiper-wrapper {
+            padding-bottom: 30px;
+            .swiper-slide {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        .swiper-pagination  {
+            bottom: 0;
+            .swiper-pagination-bullet {
+                width: 20px;
+                height: 5px;
+                border-radius: 5px;
+                background: $slate-blue;
+            }
+            .swiper-pagination-bullet-active {
+                background: $bright-blue;
+            }
+        }
     }
 }

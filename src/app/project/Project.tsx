@@ -5,9 +5,9 @@ import Image from "next/image";
 import styles from "./styles/Project.module.scss";
 import { projectsData } from "@/data/projectData";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/navigation";
+import "swiper/css/pagination";
 import "@/styles/swiper.scss";
 
 interface ProjectProps {
@@ -18,7 +18,7 @@ const Project: React.FC<ProjectProps> = ({ id }) => {
   const [activeTab, setActiveTab] = useState<string>("frontend");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const itemsPerPage = 8;
+  const itemsPerPage = 4;
 
   const tabs = Object.keys(projectsData);
   const allTags = Array.from(
@@ -78,7 +78,7 @@ const Project: React.FC<ProjectProps> = ({ id }) => {
           <div className={styles.project_tags}>
             <Swiper
               slidesPerView={1}
-              spaceBetween={10}
+              spaceBetween={15}
               pagination={{
                 clickable: true,
               }}
@@ -93,21 +93,20 @@ const Project: React.FC<ProjectProps> = ({ id }) => {
                   slidesPerView: 5,
                 },
                 "@1.50": {
-                  slidesPerView: 8,
+                  slidesPerView: 12,
                 },
               }}
               freeMode={true}
-              navigation={true}
-              modules={[Navigation]}
+              modules={[Pagination]}
               className="tagSwiper"
             >
               {allTags.map((tag) => (
                 <SwiperSlide key={tag}>
                   <button
-                    className={`px-4 py-2 border rounded-md text-sm ${
+                    className={`${styles.project_tags_button} ${
                       selectedTags.includes(tag)
-                        ? "bg-blue-500 text-white"
-                        : "bg-white text-blue-500 border-blue-500"
+                        ? styles.active
+                        : styles.inactive
                     }`}
                     onClick={() => handleTagFilter(tag)}
                   >
