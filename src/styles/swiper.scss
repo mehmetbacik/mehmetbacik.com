@@ -1,0 +1,17 @@
+.tagSwiper {
+    padding: 0px 25px;
+    .swiper-wrapper {
+        .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .swiper-button-next {
+        right: 0px;
+    }
+
+      .swiper-button-prev {
+        left: 0px;
+    }
+}

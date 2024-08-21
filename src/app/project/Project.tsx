@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import "@/styles/swiper.scss";
 
 interface ProjectProps {
   id: string;
@@ -56,15 +57,13 @@ const Project: React.FC<ProjectProps> = ({ id }) => {
           <h1 className={styles.project_bigtitle}>Project</h1>
           <h2 className={styles.project_title}>Project</h2>
         </div>
-        <div className="mb-4 w-full">
-          <div className="flex border-b border-gray-200">
+        <div className={styles.project_tab}>
+          <div className={styles.project_tab_headline}>
             {tabs.map((tab) => (
               <button
                 key={tab}
-                className={`px-4 py-2 text-sm font-medium ${
-                  activeTab === tab
-                    ? "border-b-2 border-blue-500 text-blue-500"
-                    : "text-gray-500"
+                className={`${styles.project_tab_title} ${
+                  activeTab === tab ? styles.active : styles.inactive
                 }`}
                 onClick={() => {
                   setActiveTab(tab);
@@ -76,7 +75,7 @@ const Project: React.FC<ProjectProps> = ({ id }) => {
               </button>
             ))}
           </div>
-          <div className="mb-4 mt-4">
+          <div className={styles.project_tags}>
             <Swiper
               slidesPerView={1}
               spaceBetween={10}
@@ -94,13 +93,13 @@ const Project: React.FC<ProjectProps> = ({ id }) => {
                   slidesPerView: 5,
                 },
                 "@1.50": {
-                  slidesPerView: 12,
+                  slidesPerView: 8,
                 },
               }}
               freeMode={true}
               navigation={true}
               modules={[Navigation]}
-              className="mySwiper"
+              className="tagSwiper"
             >
               {allTags.map((tag) => (
                 <SwiperSlide key={tag}>

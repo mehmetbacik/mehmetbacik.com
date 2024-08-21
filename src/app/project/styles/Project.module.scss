@@ -31,5 +31,37 @@
                 color: $slate-blue;
             }
         }
+        .project_tab {
+            width: 100%;
+            .project_tab_headline {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 15px;
+                border-bottom: solid 1px $very-light-gray;
+                .project_tab_title {
+                    font-size: 1.2rem;
+                    color: $slate-blue;
+                    font-weight: 600;
+                    padding: 8px 10px;
+                    transition-duration: 300ms;
+                    border-bottom: solid 2px transparent;
+                    &.active {
+                        border-color: $bright-blue;
+                        color: $bright-blue;
+                    }
+                    &.inactive {
+                        color: $slate-blue;
+                    }
+                    &:hover {
+                        border-color: $bright-blue;
+                        color: $bright-blue;
+                    }
+                }
+            }
+        }
+        .project_tags {
+            margin: 25px 0px;
+        }
     }
 }
