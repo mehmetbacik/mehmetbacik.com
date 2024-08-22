@@ -5,9 +5,10 @@ import Image from "next/image";
 import styles from "./styles/Project.module.scss";
 import { projectsData } from "@/data/projectData";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 import "@/styles/swiper.scss";
 
 interface ProjectProps {
@@ -130,26 +131,45 @@ const Project: React.FC<ProjectProps> = ({ id }) => {
                     src={project.image}
                     alt={project.title}
                     layout="fill"
-                    objectFit="cover"
+                    objectFit="contain"
                     className="w-full h-full"
                   />
                 </div>
                 <div className="p-4">
                   <h3 className="text-lg font-semibold">{project.title}</h3>
                   <p className="text-sm text-gray-600 mt-2">
-                    {project.description.length > 100
-                      ? `${project.description.slice(0, 100)}...`
+                    {project.description.length > 80
+                      ? `${project.description.slice(0, 80)}...`
                       : project.description}
                   </p>
                   <div className="mt-2">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="inline-block px-2 py-1 mr-2 text-xs font-semibold text-white bg-blue-500 rounded-full"
-                      >
-                        {tag}
-                      </span>
-                    ))}
+                    <Swiper
+                      slidesPerView={1}
+                      spaceBetween={10}
+                      breakpoints={{
+                        "@0.00": {
+                          slidesPerView: 2,
+                        },
+                        "@0.75": {
+                          slidesPerView: 3,
+                        },
+                        "@1.00": {
+                          slidesPerView: 4,
+                        },
+                      }}
+                      freeMode={true}
+                      modules={[Navigation]}
+                      navigation={true}
+                      className="mySwiper"
+                    >
+                      {project.tags.map((tag) => (
+                        <SwiperSlide key={tag}>
+                          <span className="inline-block px-2 py-1 mr-2 text-xs font-semibold text-white bg-blue-500 rounded-full">
+                            {tag}
+                          </span>
+                        </SwiperSlide>
+                      ))}
+                    </Swiper>
                   </div>
                 </div>
               </a>
