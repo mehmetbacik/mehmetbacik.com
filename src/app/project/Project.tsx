@@ -94,7 +94,7 @@ const Project: React.FC<ProjectProps> = ({ id }) => {
                   slidesPerView: 5,
                 },
                 "@1.50": {
-                  slidesPerView: 12,
+                  slidesPerView: 10,
                 },
               }}
               freeMode={true}
@@ -109,9 +109,10 @@ const Project: React.FC<ProjectProps> = ({ id }) => {
                         ? styles.active
                         : styles.inactive
                     }`}
+                    title={tag}
                     onClick={() => handleTagFilter(tag)}
                   >
-                    {tag}
+                    {tag.length > 10 ? `${tag.slice(0, 10)}...` : tag}
                   </button>
                 </SwiperSlide>
               ))}
@@ -137,13 +138,23 @@ const Project: React.FC<ProjectProps> = ({ id }) => {
                   />
                 </div>
                 <div className={styles.project_card_item_content}>
-                  <h3 className={styles.project_card_title}>{project.title}</h3>
-                  <p className={styles.project_card_decription}>
-                    {project.description.length > 80
-                      ? `${project.description.slice(0, 80)}...`
+                  <h3
+                    className={styles.project_card_title}
+                    title={project.title}
+                  >
+                    {project.title.length > 35
+                      ? `${project.title.slice(0, 35)}...`
+                      : project.title}
+                  </h3>
+                  <p
+                    className={styles.project_card_decription}
+                    title={project.description}
+                  >
+                    {project.description.length > 70
+                      ? `${project.description.slice(0, 70)}...`
                       : project.description}
                   </p>
-                  <div className="mt-2">
+                  <div className={styles.project_card_tags}>
                     <Swiper
                       slidesPerView={1}
                       spaceBetween={10}
@@ -161,13 +172,16 @@ const Project: React.FC<ProjectProps> = ({ id }) => {
                       freeMode={true}
                       modules={[Navigation]}
                       navigation={true}
-                      className="mySwiper"
+                      className="cardTagsSwiper"
                     >
                       {project.tags.map((tag) => (
                         <SwiperSlide key={tag}>
-                          <span className="inline-block px-2 py-1 mr-2 text-xs font-semibold text-white bg-blue-500 rounded-full">
-                            {tag}
-                          </span>
+                          <div
+                            className={styles.project_card_tags_title}
+                            title={tag}
+                          >
+                            {tag.length > 9 ? `${tag.slice(0, 9)}...` : tag}
+                          </div>
                         </SwiperSlide>
                       ))}
                     </Swiper>

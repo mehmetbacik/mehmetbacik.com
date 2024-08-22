@@ -105,7 +105,7 @@
                 .project_card_item_content {
                     display: flex;
                     flex-direction: column;
-                    gap: 5px;
+                    gap: 8px;
                     padding: 20px;
                     .project_card_title {
                         color: $slate-blue;
@@ -114,8 +114,21 @@
                     }
                     .project_card_decription {
                         color: $gray;
-                        font-size: 0.8rem;
+                        font-size: 0.9rem;
                         font-weight: 500;
+                    }
+                    .project_card_tags {
+                        .project_card_tags_title {
+                            padding: 5px 8px;
+                            border: solid 1px $bright-blue;
+                            background-color: $bright-blue;
+                            color: $white;
+                            border-radius: 5px;
+                            font-size: 0.5rem;
+                            font-weight: 500;
+                            text-align: center;
+                            width: 100%;
+                        }
                     }
                 }
             }

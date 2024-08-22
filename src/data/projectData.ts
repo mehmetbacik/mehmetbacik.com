@@ -316,7 +316,7 @@ export const projectsData: ProjectsData = {
   erasmus: [
     {
       id: "1",
-      title: "ESR-European School Radio",
+      title: "European School Radio",
       url: "https://europeanschoolradio.blogspot.com/",
       description:
         "Comenius - Education and Culture Lifelong Learning Programme",
@@ -335,7 +335,7 @@ export const projectsData: ProjectsData = {
     },
     {
       id: "2",
-      title: "PEMCEAE - Promoting English as Means of Communication in European Adult Education",
+      title: "Promoting English as Means of Communication in European Adult Education",
       url: "https://pemceae.blogspot.com/",
       description:
         "Grundtvig - Education and Culture DG Lifelong Learning Programme",
@@ -349,10 +349,10 @@ export const projectsData: ProjectsData = {
     },
     {
       id: "3",
-      title: "GOAL - Growing Outdoor Agrotourism Learning",
+      title: "Growing Outdoor Agrotourism Learning",
       url: "https://tbssgoal.blogspot.com/",
       description:
-        "Erasmus+ Project",
+        "Erasmus+ - Education and Culture Lifelong Learning Programme",
       image: "/project/erasmus.svg",
       tags: [
         "Spain",

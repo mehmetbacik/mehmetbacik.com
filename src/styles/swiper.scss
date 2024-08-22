@@ -23,4 +23,26 @@
             }
         }
     }
+    .cardTagsSwiper {
+        .swiper-button-prev, 
+        .swiper-button-next {
+            background-color: $very-light-gray;
+            width: 20px;
+            height: 28px;
+            top: 20px;
+            padding: 5px;
+            &::after {
+                font-size: 1rem;
+                font-weight: bold;
+            }
+        }
+        .swiper-button-prev {
+            left: 0;
+            border-radius: 5px 0px 0px 5px;
+        }
+        .swiper-button-next {
+            right: 0;
+            border-radius: 0px 5px 5px 0px;
+        }
+    }
 }
