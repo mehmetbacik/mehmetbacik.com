@@ -82,5 +82,43 @@
                 }
             }
         }
+        .project_card {
+            display: grid;
+            gap: 30px;
+            .project_card_item {
+                display: flex;
+                flex-direction: column;
+                background-color: $white;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                border-radius: 8px;
+                .project_card_item_img {
+                    position: relative;
+                    width: 100%;
+                    height: 12rem;
+                    border-bottom: solid 1px $very-light-gray;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        padding: 20px;
+                    }
+                }
+                .project_card_item_content {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    padding: 20px;
+                    .project_card_title {
+                        color: $slate-blue;
+                        font-size: 0.9rem;
+                        font-weight: 700;
+                    }
+                    .project_card_decription {
+                        color: $gray;
+                        font-size: 0.8rem;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
     }
 }
