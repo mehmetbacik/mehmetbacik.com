@@ -72,11 +72,17 @@ const Home: React.FC<HomeProps> = ({ id }) => {
           >
             <Icon icon="fa6-brands:instagram" width="30" height="30" />
           </a>
+          <a
+            href="mailto:mehmetbacikk@gmail.com"
+            aria-label="Email"
+          >
+            <Icon icon="mdi:at" width="30" height="30" />
+          </a>
         </div>
       </div>
       <div className={styles.mouseIcon}>
-          <Icon icon="bi:mouse" width="40" height="40" />
-        </div>
+        <Icon icon="bi:mouse" width="40" height="40" />
+      </div>
     </section>
   );
 };
