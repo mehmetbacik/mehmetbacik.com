@@ -190,11 +190,11 @@ const Project: React.FC<ProjectProps> = ({ id }) => {
               </a>
             ))}
           </div>
-          {totalPages > 1 && (
-            <div className="flex justify-center items-center mt-6 space-x-2">
+          {totalPages > 0 && (
+            <div className={styles.project_pagination}>
               <button
-                className={`px-3 py-1 border rounded ${
-                  currentPage === 1 ? "opacity-50 cursor-not-allowed" : ""
+                className={`${styles.project_pagination_controls} ${
+                  currentPage === 1 ? styles.project_pagination_controls_disabled : ""
                 }`}
                 onClick={() => handlePageChange(currentPage - 1)}
                 disabled={currentPage === 1}
@@ -203,21 +203,22 @@ const Project: React.FC<ProjectProps> = ({ id }) => {
               </button>
               {Array.from({ length: totalPages }, (_, i) => (
                 <button
-                  key={i}
-                  className={`px-3 py-1 border rounded ${
+                  key={i + 1}
+                  className={`${styles.project_pagination_pages} ${
                     currentPage === i + 1
-                      ? "bg-blue-500 text-white"
-                      : "bg-white text-blue-500"
+                      ? styles.active
+                      : styles.inactive
                   }`}
                   onClick={() => handlePageChange(i + 1)}
+                  disabled={currentPage === i + 1}
                 >
                   {i + 1}
                 </button>
               ))}
               <button
-                className={`px-3 py-1 border rounded ${
+                className={`${styles.project_pagination_controls} ${
                   currentPage === totalPages
-                    ? "opacity-50 cursor-not-allowed"
+                    ? styles.project_pagination_controls_disabled
                     : ""
                 }`}
                 onClick={() => handlePageChange(currentPage + 1)}

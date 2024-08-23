@@ -133,5 +133,51 @@
                 }
             }
         }
+        .project_pagination {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            .project_pagination_controls {
+                width: 40px;
+                height: 40px;
+                border: solid 1px $pale-gray;
+                border-radius: 30px;
+                color: $gray;
+                font-size: 1rem;
+                background-color: $white;
+                transition-duration: 300ms;
+                &.project_pagination_controls_disabled {
+                    opacity: 0.5;
+                    cursor: not-allowed;
+                }
+                &:hover {
+                    background-color: $bright-blue;
+                    color: $white;
+                }
+            }
+            .project_pagination_pages {
+                width: 40px;
+                height: 40px;
+                border: solid 1px $pale-gray;
+                border-radius: 30px;
+                font-size: 1rem;
+                transition-duration: 300ms;
+                &.active {
+                    background-color: $bright-blue;
+                    color: $white;
+                }
+                &.inactive {
+                    background-color: $white;
+                    color: $bright-blue;
+                }
+                &:hover {
+                    background-color: $bright-blue;
+                    color: $white;
+                }
+            }
+        }
     }
 }
