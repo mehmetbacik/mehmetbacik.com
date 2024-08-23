@@ -4,6 +4,7 @@ import React from "react";
 import Typewriter from "typewriter-effect";
 import { Icon } from "@iconify/react";
 import styles from "./styles/Home.module.scss";
+import { socialMediaData } from "@/data/socialMediaData";
 
 interface HomeProps {
   id: string;
@@ -40,44 +41,17 @@ const Home: React.FC<HomeProps> = ({ id }) => {
           </span>
         </div>
         <div className={styles.hero_socialIcons}>
-          <a
-            href="https://www.linkedin.com/in/mehmetbacik/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-          >
-            <Icon icon="fa6-brands:linkedin" width="30" height="30" />
-          </a>
-          <a
-            href="https://github.com/mehmetbacik"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-          >
-            <Icon icon="fa6-brands:github" width="30" height="30" />
-          </a>
-          <a
-            href="https://x.com/mehmetbacikk"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="x"
-          >
-            <Icon icon="fa6-brands:x-twitter" width="30" height="30" />
-          </a>
-          <a
-            href="https://www.instagram.com/mehmetbacik/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-          >
-            <Icon icon="fa6-brands:instagram" width="30" height="30" />
-          </a>
-          <a
-            href="mailto:mehmetbacikk@gmail.com"
-            aria-label="Email"
-          >
-            <Icon icon="mdi:at" width="30" height="30" />
-          </a>
+          {socialMediaData.map((social) => (
+            <a
+              key={social.platform}
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={social.platform}
+            >
+              <Icon icon={social.icon} width="30" height="30" />
+            </a>
+          ))}
         </div>
       </div>
       <div className={styles.mouseIcon}>
