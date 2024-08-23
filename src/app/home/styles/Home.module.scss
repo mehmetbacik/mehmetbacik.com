@@ -54,6 +54,7 @@
             transition: color 0.3s ease;
             a {
                 transition: color 0.3s ease;
+                color: $slate-blue;
                 &:hover {
                     color: $bright-blue;
                 }

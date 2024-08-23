@@ -31,5 +31,39 @@
                 color: $slate-blue;
             }
         }
+        .contact_description {
+            font-size: 1.2rem;
+            color: $slate-blue;
+            font-weight: 500;
+            text-align: center;
+        }
+        .contact_socialIcons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            transition: color 0.3s ease;
+            a {
+                transition: color 0.3s ease;
+                color: $slate-blue;
+                &:hover {
+                    color: $bright-blue;
+                }
+            }
+            svg {
+                transition: fill 0.3s ease;
+                fill: currentColor;
+            }
+        }
+        .footer {
+            position: absolute;
+            bottom: 0;
+            padding: 15px;
+            p {
+                font-size: 1.1rem;
+                font-weight: 500;
+                color: $slate-blue;
+            }
+        }
     }
 }

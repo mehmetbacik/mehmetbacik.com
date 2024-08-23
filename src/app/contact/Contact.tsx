@@ -16,12 +16,12 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
           <h1 className={styles.contact_bigtitle}>Contact</h1>
           <h2 className={styles.contact_title}>Contact</h2>
         </div>
-        <p className="text-lg text-center mb-8 max-w-xl">
+        <p className={`max-w-xl ${styles.contact_description}`}>
           Feel free to reach out to me through any of the platforms below. I am
           always open to discuss new projects, creative ideas, or opportunities
           to be part of your vision.
         </p>
-        <div className="flex space-x-6">
+        <div className={styles.contact_socialIcons}>
           <a
             href="https://www.linkedin.com/in/mehmetbacik/"
             target="_blank"
@@ -61,8 +61,8 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
             <Icon icon="mdi:at" width="30" height="30" />
           </a>
         </div>
-        <footer className="w-full py-4 absolute bottom-0">
-          <p className="text-center">
+        <footer className={styles.footer}>
+          <p>
             &copy; {new Date().getFullYear()} Mehmet BACIK. All Rights Reserved.
           </p>
         </footer>
