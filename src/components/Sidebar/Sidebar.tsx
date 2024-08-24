@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { Icon } from "@iconify/react";
 import styles from "./styles/Sidebar.module.scss";
+import { sidebarData } from "@/data/sidebarData";
 
 const Sidebar = () => {
   const pathname = usePathname();
@@ -70,15 +71,7 @@ const Sidebar = () => {
           <Icon icon="mdi:close" width="24" height="24" />
         </button>
         <ul className={styles.menu_content}>
-          {[
-            { name: "Home", icon: "mdi:home" },
-            { name: "About", icon: "mdi:account" },
-            { name: "Experience", icon: "mdi:file-document" },
-            { name: "Education", icon: "mdi:school" },
-            { name: "Technology", icon: "mdi:cog" },
-            { name: "Project", icon: "mdi:briefcase" },
-            { name: "Contact", icon: "mdi:email" },
-          ].map((item) => (
+          {sidebarData.map((item) => (
             <Link
               key={item.name}
               href={`#${item.name.toLowerCase()}`}

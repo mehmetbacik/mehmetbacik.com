@@ -34,7 +34,12 @@ export interface ProjectsData {
 }
 
 export interface SocialMediaItem {
-    platform: string;
-    url: string;
-    icon: string;
-  }
+  platform: string;
+  url: string;
+  icon: string;
+}
+
+export interface SidebarItem {
+  name: string;
+  icon: string;
+}
