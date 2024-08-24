@@ -55,22 +55,37 @@
                 padding: 12px;
                 border-radius: 30px;
                 cursor: pointer;
-                transition-duration: 300ms;
                 transition-property: all;
                 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-                transition-duration: 150ms;
+                transition-duration: 300ms;
+                overflow: hidden;
+                width: 48px; 
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                background-color: $very-light-gray;
+                color: $black;
                 &.active {
                     background-color: $bright-blue;
                     color: $white;
                 }
-                &.inactive {
-                    background-color: $very-light-gray;
-                    color: $black;
+                .menu_item_name {
+                    max-width: 0;
+                    overflow: hidden;
+                    display: none;
+                    opacity: 0;
+                    white-space: nowrap;
+                    transition: max-width 0.3s ease, opacity 0.3s ease;
                 }
-                .menu_item_content {
-                    display: flex;
-                    align-items: center;
-                    gap: 10px;
+                &:hover {
+                    width: 150px;
+                    background-color: $bright-blue;
+                    color: $white;
+                }
+                &:hover .menu_item_name {
+                    display: block;
+                    max-width: 100px;
+                    opacity: 1;
                 }
             }
         }

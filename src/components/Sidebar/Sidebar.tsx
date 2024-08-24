@@ -4,8 +4,6 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { Icon } from "@iconify/react";
-import { Tooltip } from "react-tooltip";
-import "react-tooltip/dist/react-tooltip.css";
 import styles from "./styles/Sidebar.module.scss";
 
 const Sidebar = () => {
@@ -24,7 +22,7 @@ const Sidebar = () => {
         }
       }
     };
-  
+
     handleHashChange();
   }, [pathname]);
 
@@ -32,19 +30,22 @@ const Sidebar = () => {
     const handleScroll = () => {
       const sections = document.querySelectorAll("section");
       let currentId: string | null = "home";
-  
+
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
-        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+        if (
+          rect.top <= window.innerHeight / 2 &&
+          rect.bottom >= window.innerHeight / 2
+        ) {
           currentId = section.getAttribute("id");
         }
       });
-  
+
       setActiveId(currentId || "home");
     };
-  
+
     window.addEventListener("scroll", handleScroll);
-  
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -78,24 +79,22 @@ const Sidebar = () => {
             { name: "Project", icon: "mdi:briefcase" },
             { name: "Contact", icon: "mdi:email" },
           ].map((item) => (
-            <li
+            <Link
               key={item.name}
-              className={`${styles.menu_item} ${
-                activeId === item.name.toLowerCase()
-                  ? styles.active
-                  : styles.inactive
-              }`}
+              href={`#${item.name.toLowerCase()}`}
+              className={styles.menu_item_link}
             >
-              <Link
-                href={`#${item.name.toLowerCase()}`}
-                className={styles.menu_item_content}
-                data-tooltip-id={item.name}
-                data-tooltip-content={item.name}
+              <li
+                className={`${styles.menu_item} ${
+                  activeId === item.name.toLowerCase()
+                    ? styles.active
+                    : styles.inactive
+                }`}
               >
                 <Icon icon={item.icon} width="24" height="24" />
-              </Link>
-              <Tooltip id={item.name} place="right" />
-            </li>
+                <span className={styles.menu_item_name}>{item.name}</span>
+              </li>
+            </Link>
           ))}
         </ul>
       </div>
