@@ -39,7 +39,11 @@
             gap: 10px;
             .hero_title {
                 font-size: 4rem;
+                @media (max-width: 425px) {
+                    font-size: 3rem;
+                }
                 font-weight: 700;
+                text-align: center;
             }
             .hero_subtitle {
                 font-size: 2rem;
@@ -76,13 +80,13 @@
         cursor: pointer;
         @keyframes mouseMove {
             0% {
-              transform: translateY(0);
+                transform: translateY(0);
             }
             50% {
-              transform: translateY(-10px);
+                transform: translateY(-10px);
             }
             100% {
-              transform: translateY(0);
+                transform: translateY(0);
             }
         }
     }
