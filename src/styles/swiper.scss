@@ -4,6 +4,9 @@
     .tagSwiper {
         .swiper-wrapper {
             padding-bottom: 30px;
+            @media (max-width: 640px) {
+                width: 100px;
+            }
             .swiper-slide {
                 display: flex;
                 align-items: center;

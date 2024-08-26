@@ -119,7 +119,7 @@ const Project: React.FC<ProjectProps> = ({ id }) => {
             </Swiper>
           </div>
           <div
-            className={`grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 ${styles.project_card}`}
+            className={`grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 ${styles.project_card}`}
           >
             {paginatedProjects.map((project) => (
               <a
@@ -142,16 +142,16 @@ const Project: React.FC<ProjectProps> = ({ id }) => {
                     className={styles.project_card_title}
                     title={project.title}
                   >
-                    {project.title.length > 35
-                      ? `${project.title.slice(0, 35)}...`
+                    {project.title.length > 25
+                      ? `${project.title.slice(0, 25)}...`
                       : project.title}
                   </h3>
                   <p
                     className={styles.project_card_decription}
                     title={project.description}
                   >
-                    {project.description.length > 70
-                      ? `${project.description.slice(0, 70)}...`
+                    {project.description.length > 50
+                      ? `${project.description.slice(0, 50)}...`
                       : project.description}
                   </p>
                   <div className={styles.project_card_tags}>
@@ -166,7 +166,7 @@ const Project: React.FC<ProjectProps> = ({ id }) => {
                           slidesPerView: 3,
                         },
                         "@1.00": {
-                          slidesPerView: 4,
+                          slidesPerView: 3,
                         },
                       }}
                       freeMode={true}
