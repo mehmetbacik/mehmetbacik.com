@@ -54,6 +54,12 @@ const Sidebar = () => {
     setIsMenuOpen((prev) => !prev);
   };
 
+  const handleLinkClick = () => {
+    if (isMenuOpen) {
+      setIsMenuOpen(false);
+    }
+  };
+
   return (
     <nav className={styles.sidebar}>
       <button className={styles.mobile_menu_button} onClick={handleMenuClick}>
@@ -72,10 +78,7 @@ const Sidebar = () => {
         </button>
         <ul className={styles.menu_content}>
           {sidebarData.map((item) => (
-            <li
-              key={item.name}
-              className={`${styles.menu_item}`}
-            >
+            <li key={item.name} className={`${styles.menu_item}`}>
               <Link
                 href={`#${item.name.toLowerCase()}`}
                 className={`${styles.menu_item_link} ${
@@ -83,6 +86,7 @@ const Sidebar = () => {
                     ? styles.active
                     : styles.inactive
                 }`}
+                onClick={handleLinkClick}
               >
                 <Icon icon={item.icon} width="24" height="24" />
                 <span className={styles.menu_item_name}>{item.name}</span>

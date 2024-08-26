@@ -51,6 +51,10 @@
             gap: 10px;
             margin-top: 0px;
             padding: 0px;
+            @media (max-width: 768px) {
+                padding: 60px;
+                width: 100%;
+            }
             .menu_item {
                 .menu_item_link {
                     position: relative;
@@ -68,6 +72,9 @@
                     background-color: $very-light-gray;
                     color: $black;
                     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                    @media (max-width: 768px) {
+                        width: 100%;
+                    }
                     &.active {
                         background-color: $bright-blue;
                         color: $white;
@@ -79,6 +86,12 @@
                         opacity: 0;
                         white-space: nowrap;
                         transition: max-width 0.3s ease, opacity 0.3s ease;
+                        @media (max-width: 768px) {
+                            width: 100%;
+                            display: block;
+                            overflow: visible;
+                            opacity: 1;
+                        }
                     }
                     &:hover {
                         width: 150px;
@@ -103,7 +116,7 @@
         }
         @media (max-width: 768px) {
             position: fixed;
-            background-color: $black;
+            background-color: $transparent-black;
             align-items: flex-start;
             .mobile_close_button {
                 display: block;
