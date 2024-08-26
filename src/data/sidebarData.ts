@@ -1,11 +1,11 @@
 import { SidebarItem } from "../types/types";
 
 export const sidebarData: SidebarItem[] = [
-  { name: "Home", icon: "mdi:home" },
-  { name: "About", icon: "mdi:account" },
-  { name: "Experience", icon: "mdi:file-document" },
-  { name: "Education", icon: "mdi:school" },
-  { name: "Technology", icon: "mdi:cog" },
-  { name: "Project", icon: "mdi:briefcase" },
-  { name: "Contact", icon: "mdi:email" },
+  { name: "Home", icon: "solar:home-2-broken" },
+  { name: "About", icon: "solar:user-id-broken" },
+  { name: "Experience", icon: "solar:case-minimalistic-broken" },
+  { name: "Education", icon: "solar:square-academic-cap-2-broken" },
+  { name: "Technology", icon: "solar:settings-broken" },
+  { name: "Project", icon: "solar:code-broken" },
+  { name: "Contact", icon: "solar:letter-broken" },
 ];

@@ -72,13 +72,13 @@ const Sidebar = () => {
         </button>
         <ul className={styles.menu_content}>
           {sidebarData.map((item) => (
-            <Link
+            <li
               key={item.name}
-              href={`#${item.name.toLowerCase()}`}
-              className={styles.menu_item_link}
+              className={`${styles.menu_item}`}
             >
-              <li
-                className={`${styles.menu_item} ${
+              <Link
+                href={`#${item.name.toLowerCase()}`}
+                className={`${styles.menu_item_link} ${
                   activeId === item.name.toLowerCase()
                     ? styles.active
                     : styles.inactive
@@ -86,8 +86,8 @@ const Sidebar = () => {
               >
                 <Icon icon={item.icon} width="24" height="24" />
                 <span className={styles.menu_item_name}>{item.name}</span>
-              </li>
-            </Link>
+              </Link>
+            </li>
           ))}
         </ul>
       </div>
