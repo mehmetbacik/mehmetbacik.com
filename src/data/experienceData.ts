@@ -61,7 +61,7 @@ export const experienceData: ExperienceItem[] = [
     description: `As a Intern in the e-commerce industry, I helped develop user-friendly web interfaces and assist with maintaining product 
     pages and checkout processes. My tasks included coding, testing, and debugging frontend components, as well as supporting integration with 
     backend systems. This role provided me with valuable experience in enhancing web performance and usability.`,
-    technology: "HTML - CSS - PHP - MySQL - NotePad++ - AdobePhotoshop",
+    technology: "HTML - CSS - PHP - MySQL - NotePad++ - Photoshop",
     logo: "/img/tsoft.jpg",
   },
 ];
@@ -108,5 +108,5 @@ export const technologyIconMapping: { [key: string]: string } = {
   "BBEdit": "logos:apple-app-store",
   "SublimeText": "logos:sublimetext-icon",
   "NotePad++": "simple-icons:notepadplusplus",
-  "AdobePhotoshop": "logos:adobe-photoshop",
+  "Photoshop": "logos:adobe-photoshop",
 };
