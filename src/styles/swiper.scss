@@ -12,7 +12,8 @@
                 justify-content: center;
             }
         }
-        .swiper-pagination  {
+        .swiper-button-prev, 
+        .swiper-button-next {
             display: none;
         }
     }
@@ -28,18 +29,9 @@
                 justify-content: center;
             }
         }
-        .swiper-pagination  {
-            bottom: 0;
+        .swiper-button-prev, 
+        .swiper-button-next {
             display: none;
-            .swiper-pagination-bullet {
-                width: 20px;
-                height: 5px;
-                border-radius: 5px;
-                background: $slate-blue;
-            }
-            .swiper-pagination-bullet-active {
-                background: $bright-blue;
-            }
         }
     }
     .cardTagsSwiper {

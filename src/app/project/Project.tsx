@@ -5,9 +5,8 @@ import Image from "next/image";
 import styles from "./styles/Project.module.scss";
 import { projectsData } from "@/data/projectData";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
+import {  Navigation } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "@/styles/swiper.scss";
 
@@ -63,9 +62,6 @@ const Project: React.FC<ProjectProps> = ({ id }) => {
           <Swiper
               slidesPerView={1}
               spaceBetween={10}
-              pagination={{
-                clickable: true,
-              }}
               breakpoints={{
                 "@0.00": {
                   slidesPerView: 2,
@@ -81,7 +77,8 @@ const Project: React.FC<ProjectProps> = ({ id }) => {
                 },
               }}
               freeMode={true}
-              modules={[Pagination]}
+              modules={[Navigation]}
+              navigation={true}
               className="tabSwiper"
             >
               {tabs.map((tab) => (
@@ -106,9 +103,6 @@ const Project: React.FC<ProjectProps> = ({ id }) => {
             <Swiper
               slidesPerView={1}
               spaceBetween={10}
-              pagination={{
-                clickable: true,
-              }}
               breakpoints={{
                 "@0.00": {
                   slidesPerView: 3,
@@ -124,7 +118,8 @@ const Project: React.FC<ProjectProps> = ({ id }) => {
                 },
               }}
               freeMode={true}
-              modules={[Pagination]}
+              modules={[Navigation]}
+              navigation={true}
               className="tagSwiper"
             >
               {allTags.map((tag) => (
