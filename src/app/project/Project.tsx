@@ -60,21 +60,47 @@ const Project: React.FC<ProjectProps> = ({ id }) => {
         </div>
         <div className={styles.project_tab}>
           <div className={styles.project_tab_headline}>
-            {tabs.map((tab) => (
-              <button
-                key={tab}
-                className={`${styles.project_tab_title} ${
-                  activeTab === tab ? styles.active : styles.inactive
-                }`}
-                onClick={() => {
-                  setActiveTab(tab);
-                  setSelectedTags([]);
-                  setCurrentPage(1);
-                }}
-              >
-                {tab.charAt(0).toUpperCase() + tab.slice(1)}
-              </button>
-            ))}
+          <Swiper
+              slidesPerView={1}
+              spaceBetween={15}
+              pagination={{
+                clickable: true,
+              }}
+              breakpoints={{
+                "@0.00": {
+                  slidesPerView: 2,
+                },
+                "@0.75": {
+                  slidesPerView: 3,
+                },
+                "@1.00": {
+                  slidesPerView: 4,
+                },
+                "@1.50": {
+                  slidesPerView: 4,
+                },
+              }}
+              freeMode={true}
+              modules={[Pagination]}
+              className="tabSwiper"
+            >
+              {tabs.map((tab) => (
+                <SwiperSlide key={tab}>
+                  <button
+                    className={`${styles.project_tab_title} ${
+                      activeTab === tab ? styles.active : styles.inactive
+                    }`}
+                    onClick={() => {
+                      setActiveTab(tab);
+                      setSelectedTags([]);
+                      setCurrentPage(1);
+                    }}
+                  >
+                    {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                  </button>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
           <div className={styles.project_tags}>
             <Swiper
@@ -194,7 +220,9 @@ const Project: React.FC<ProjectProps> = ({ id }) => {
             <div className={styles.project_pagination}>
               <button
                 className={`${styles.project_pagination_controls} ${
-                  currentPage === 1 ? styles.project_pagination_controls_disabled : ""
+                  currentPage === 1
+                    ? styles.project_pagination_controls_disabled
+                    : ""
                 }`}
                 onClick={() => handlePageChange(currentPage - 1)}
                 disabled={currentPage === 1}
@@ -205,9 +233,7 @@ const Project: React.FC<ProjectProps> = ({ id }) => {
                 <button
                   key={i + 1}
                   className={`${styles.project_pagination_pages} ${
-                    currentPage === i + 1
-                      ? styles.active
-                      : styles.inactive
+                    currentPage === i + 1 ? styles.active : styles.inactive
                   }`}
                   onClick={() => handlePageChange(i + 1)}
                   disabled={currentPage === i + 1}

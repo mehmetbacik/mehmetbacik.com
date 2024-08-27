@@ -1,6 +1,21 @@
 @import "variables";
 
 #project {
+    .tabSwiper {
+        .swiper-wrapper {
+            @media (max-width: 640px) {
+                width: 300px;
+            }
+            .swiper-slide {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        .swiper-pagination  {
+            display: none;
+        }
+    }
     .tagSwiper {
         .swiper-wrapper {
             padding-bottom: 30px;
