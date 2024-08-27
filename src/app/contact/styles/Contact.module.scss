@@ -24,10 +24,10 @@
             .contact_bigtitle {
                 position: absolute;
                 font-size: 7rem;
-                @media (max-width: 425px) {
-                    font-size: 4.5rem;
+                @media (max-width: 768px) {
+                    font-size: 4rem;
                 }
-                @media (max-width: 375px) {
+                @media (max-width: 425px) {
                     font-size: 3rem;
                 }
                 font-weight: bold;
@@ -36,10 +36,10 @@
             }
             .contact_title {
                 font-size: 4rem;
-                @media (max-width: 425px) {
+                @media (max-width: 768px) {
                     font-size: 3rem;
                 }
-                @media (max-width: 375px) {
+                @media (max-width: 425px) {
                     font-size: 2rem;
                 }
                 font-weight: bold;

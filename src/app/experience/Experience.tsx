@@ -108,7 +108,7 @@ const Experience: React.FC<ExperienceProps> = ({ id }) => {
                     onClick={() => setSelectedExperience(null)}
                   >
                     <div
-                      className={`shadow-lg w-11/12 md:w-4/12 ${styles.experience_popup_content}`}
+                      className={`shadow-lg w-11/12 lg:w-6/12 xl:w-4/12 ${styles.experience_popup_content}`}
                       onClick={(e) => e.stopPropagation()}
                     >
                       <button

@@ -4,7 +4,7 @@
     .tabSwiper {
         .swiper-wrapper {
             @media (max-width: 640px) {
-                width: 300px;
+                width: 250px;
             }
             .swiper-slide {
                 display: flex;
@@ -30,9 +30,7 @@
         }
         .swiper-pagination  {
             bottom: 0;
-            @media (max-width: 645px) {
-                display: none;
-            }
+            display: none;
             .swiper-pagination-bullet {
                 width: 20px;
                 height: 5px;
@@ -52,9 +50,7 @@
             height: 28px;
             top: 20px;
             padding: 5px;
-            @media (max-width: 645px) {
-                display: none;
-            }
+            display: none;
             &::after {
                 font-size: 1rem;
                 font-weight: bold;

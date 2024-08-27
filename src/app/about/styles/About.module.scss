@@ -21,10 +21,10 @@
             .about_bigtitle {
                 position: absolute;
                 font-size: 7rem;
-                @media (max-width: 425px) {
-                    font-size: 4.5rem;
+                @media (max-width: 768px) {
+                    font-size: 4rem;
                 }
-                @media (max-width: 375px) {
+                @media (max-width: 425px) {
                     font-size: 3rem;
                 }
                 font-weight: bold;
@@ -33,10 +33,10 @@
             }
             .about_title {
                 font-size: 4rem;
-                @media (max-width: 425px) {
+                @media (max-width: 768px) {
                     font-size: 3rem;
                 }
-                @media (max-width: 375px) {
+                @media (max-width: 425px) {
                     font-size: 2rem;
                 }
                 font-weight: bold;
@@ -48,9 +48,11 @@
             align-items: flex-start;
             justify-content: center;
             gap: 90px;
-            @media (max-width: 425px) {
+            @media (max-width: 992px) {
                 flex-direction: column-reverse;
                 align-items: center;
+            }
+            @media (max-width: 1024px) {
                 gap: 50px;
             }
             .about_image {

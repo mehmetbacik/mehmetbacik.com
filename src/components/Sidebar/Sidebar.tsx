@@ -74,7 +74,7 @@ const Sidebar = () => {
           className={styles.mobile_close_button}
           onClick={handleMenuClick}
         >
-          <Icon icon="mdi:close" width="24" height="24" />
+          <Icon icon="mdi:close" width="32" height="32" />
         </button>
         <ul className={styles.menu_content}>
           {sidebarData.map((item) => (

@@ -23,10 +23,10 @@
             .technology_bigtitle {
                 position: absolute;
                 font-size: 7rem;
-                @media (max-width: 425px) {
-                    font-size: 4.5rem;
+                @media (max-width: 768px) {
+                    font-size: 4rem;
                 }
-                @media (max-width: 375px) {
+                @media (max-width: 425px) {
                     font-size: 3rem;
                 }
                 font-weight: bold;
@@ -35,10 +35,10 @@
             }
             .technology_title {
                 font-size: 4rem;
-                @media (max-width: 425px) {
+                @media (max-width: 768px) {
                     font-size: 3rem;
                 }
-                @media (max-width: 375px) {
+                @media (max-width: 425px) {
                     font-size: 2rem;
                 }
                 font-weight: bold;
@@ -68,7 +68,7 @@
             .technology_card_icons {
                 display: grid;
                 grid-template-columns: repeat(4, minmax(0, 1fr));
-                @media (max-width: 375px) {
+                @media (max-width: 1279px) {
                     grid-template-columns: repeat(3, minmax(0, 1fr));
                 }
                 gap: 15px;

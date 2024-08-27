@@ -17,7 +17,7 @@ const Technology: React.FC<TechnologyProps> = ({ id }) => {
           <h1 className={styles.technology_bigtitle}>TechStack</h1>
           <h2 className={styles.technology_title}>Tech Stack</h2>
         </div>
-        <div className={`grid-cols-1 md:grid-cols-3 ${styles.technology_list}`}>
+        <div className={`grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ${styles.technology_list}`}>
           {Object.entries(technologyData).map(([group, techList], index) => (
             <div key={index} className={styles.technology_card}>
               <h3 className={styles.technology_card_title}>
