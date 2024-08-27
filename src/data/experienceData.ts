@@ -10,7 +10,7 @@ export const experienceData: ExperienceItem[] = [
     applying Agile methodologies to optimize workflows. My work involved managing frontend architecture, improving code quality, 
     and enhancing user experience across multiple challenging projects.`,
     technology:
-      "React.js - Typescript - Next.js - Vite - React Router - Redux - SWR - SASS - TailwindCSS - HTML - CSS - Javascript - Node.js - npm - Swagger - Git - Visual Studio Code - Azure Devops",
+      "React.js - Typescript - Next.js - Vite - React Router - Redux - SWR - SASS - TailwindCSS - HTML - CSS - Javascript - Node.js - npm - Swagger - Git - VS Code - Azure Devops",
     logo: "/img/ekspar.jpg",
   },
   {
@@ -25,7 +25,7 @@ export const experienceData: ExperienceItem[] = [
       I utilized Agile methodologies to streamline development processes and deliver innovative features that met both client expectations 
       and industry standards.`,
     technology:
-      "HTML - CSS - Javascript - Yarn - SVN(Subversion) - Python - Docker - BBEdit - Xcode - Visual Studio Code - Radar",
+      "HTML - CSS - Javascript - Yarn - SVN - Python - Docker - BBEdit - Xcode - VS Code - Radar",
     logo: "/img/hogarth.jpg",
   },
   {
@@ -39,7 +39,7 @@ export const experienceData: ExperienceItem[] = [
     cross-functional teams to integrate with backend systems and third-party services, aiming to drive user engagement and conversion rates 
     through innovative features that met market demands and business goals.`,
     technology:
-      "Vue.js - Angular - Vue Router - Vuex - SASS - Bootstrap - HTML - CSS - Javascript - Jquery - PHP - MySQL - Node.js - npm - Figma - Sketch - Adobe Xd - Zeplin - Visual Studio Code - Trello",
+      "Vue.js - Angular - Vue Router - Vuex - SASS - Bootstrap - HTML - CSS - Javascript - Jquery - PHP - MySQL - Node.js - npm - Figma - Sketch - Adobe Xd - Zeplin - VS Code - Trello",
     logo: "/img/tsoft.jpg",
   },
   {
@@ -92,7 +92,7 @@ export const technologyIconMapping: { [key: string]: string } = {
   "MySQL": "logos:mysql",
   "npm": "logos:npm-icon",
   "Yarn": "logos:yarn",
-  "SVN(Subversion)": "logos:subversion",
+  "SVN": "logos:subversion",
   "Git": "logos:git-icon",
   "Docker": "logos:docker-icon",
   "Swagger": "logos:swagger",
@@ -103,7 +103,7 @@ export const technologyIconMapping: { [key: string]: string } = {
   "Sketch": "logos:sketch",
   "Adobe Xd": "logos:adobe-xd",
   "Zeplin": "logos:zeplin",
-  "Visual Studio Code": "logos:visual-studio-code",
+  "VS Code": "logos:visual-studio-code",
   "Xcode": "logos:xcode",
   "BBEdit": "logos:apple-app-store",
   "SublimeText": "logos:sublimetext-icon",

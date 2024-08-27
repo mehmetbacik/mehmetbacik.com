@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Icon } from "@iconify/react";
 import Image from "next/image";
 import styles from "./styles/Experience.module.scss";
@@ -19,6 +19,18 @@ const Experience: React.FC<ExperienceProps> = ({ id }) => {
   const togglePopup = (index: number) => {
     setSelectedExperience(selectedExperience === index ? null : index);
   };
+
+
+  useEffect(() => {
+    if (selectedExperience !== null) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+    return () => {
+      document.body.classList.remove("no-scroll");
+    };
+  }, [selectedExperience]);
 
   const truncateText = (text: string, limit: number) => {
     if (text.length > limit) {
@@ -129,7 +141,9 @@ const Experience: React.FC<ExperienceProps> = ({ id }) => {
                                 height="18"
                                 className="text-blue-500"
                               />
-                              <span className={styles.tech_used_item_title}>{tech}</span>
+                              <span className={styles.tech_used_item_title}>
+                                {tech}
+                              </span>
                             </li>
                           ))}
                         </ul>
