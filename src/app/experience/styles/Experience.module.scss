@@ -111,6 +111,9 @@
                                 .experience_card_technologies_item {
                                     display: flex;
                                     align-items: center;
+                                    @media (max-width: 375px) {
+                                        font-size: 0.9rem;
+                                    }
                                     @media (max-width: 425px) {
                                         justify-content: center;
                                     }

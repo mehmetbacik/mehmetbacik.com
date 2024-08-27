@@ -91,9 +91,11 @@
                     color: $bright-blue;
                     background-color: $white;
                 }
-                &:hover {
-                    color: $bright-blue;
-                    background-color: $white;
+                @media (min-width: 1200px) {
+                    &:hover {
+                        color: $bright-blue;
+                        background-color: $white;
+                    }
                 }
             }
         }

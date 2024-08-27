@@ -40,7 +40,7 @@
             position: absolute;
             top: 0px;
             right: 0px;
-            color: $white;
+            color: $bright-blue;
             font-size: 20px;
             padding: 20px;
             display: none;
@@ -116,7 +116,7 @@
         }
         @media (max-width: 767px) {
             position: fixed;
-            background-color: $transparent-black;
+            background-color: $white;
             align-items: flex-start;
             .mobile_close_button {
                 display: block;

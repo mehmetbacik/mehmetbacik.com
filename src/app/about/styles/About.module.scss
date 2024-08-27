@@ -63,6 +63,9 @@
                     border-radius: 8px;
                     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
                 }
+                @media (max-width: 992px) {
+                    display: none;
+                }
             }
             .about_description {
                 display: flex;
@@ -77,14 +80,14 @@
             }
             @media (max-width: 768px) {
                 .about_description {
-                    max-height: 250px;
+                    max-height: 500px;
                     overflow: hidden;
                     transition: max-height 0.3s ease;
                     &.show_all {
                         max-height: 1750px;
                     }
                     &.show_less {
-                        max-height: 250px;
+                        max-height: 500px;
                     }
                 }
                 .about_showmore {

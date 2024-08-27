@@ -48,7 +48,9 @@
     }
     .technology_list {
         display: grid;
-        grid-auto-rows: minmax(0, 1fr);
+        @media (min-width: 768px) {
+            grid-auto-rows: minmax(0, 1fr);
+        }
         gap: 30px;
         .technology_card {
             background-color: $white;
@@ -57,7 +59,9 @@
             padding: 20px;
             display: flex;
             flex-direction: column;
-            gap: 25px;
+            @media (min-width: 768px) {
+                gap: 25px;
+            }
             height: 100%;
             .technology_card_title {
                 font-size: 1.2rem;
@@ -72,6 +76,22 @@
                     grid-template-columns: repeat(3, minmax(0, 1fr));
                 }
                 gap: 15px;
+                @media (max-width: 767px) {
+                    max-height: 0;
+                    overflow: hidden;
+                    padding-top: 0;
+                    transition: max-height 0.5s ease, padding-top 0.5s ease;
+                    &.open {
+                        max-height: 700px;
+                        padding-top: 25px;
+                        overflow: visible;
+                    }
+                    &.closed {
+                        max-height: 0;
+                        padding-top: 0;
+                        overflow: hidden;
+                    }
+                }
                 .technology_card_icons_content {
                     display: flex;
                     flex-direction: column;
