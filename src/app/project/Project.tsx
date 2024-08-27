@@ -5,7 +5,7 @@ import Image from "next/image";
 import styles from "./styles/Project.module.scss";
 import { projectsData } from "@/data/projectData";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {  Navigation } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "@/styles/swiper.scss";
@@ -59,7 +59,7 @@ const Project: React.FC<ProjectProps> = ({ id }) => {
         </div>
         <div className={styles.project_tab}>
           <div className={styles.project_tab_headline}>
-          <Swiper
+            <Swiper
               slidesPerView={1}
               spaceBetween={10}
               breakpoints={{
