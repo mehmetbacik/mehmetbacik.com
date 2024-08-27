@@ -12,6 +12,9 @@
         align-items: center;
         justify-content: center;
         gap: 50px;
+        @media (max-width: 425px) {
+            gap: 30px;
+        }
         .technology_headline {
             position: relative;
             display: flex;
@@ -23,6 +26,9 @@
                 @media (max-width: 425px) {
                     font-size: 4.5rem;
                 }
+                @media (max-width: 375px) {
+                    font-size: 3rem;
+                }
                 font-weight: bold;
                 color: rgb(0 0 0 / 10%);
                 z-index: -1;
@@ -31,6 +37,9 @@
                 font-size: 4rem;
                 @media (max-width: 425px) {
                     font-size: 3rem;
+                }
+                @media (max-width: 375px) {
+                    font-size: 2rem;
                 }
                 font-weight: bold;
                 color: $slate-blue;

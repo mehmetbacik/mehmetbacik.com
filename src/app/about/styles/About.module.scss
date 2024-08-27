@@ -10,6 +10,9 @@
         align-items: center;
         justify-content: center;
         gap: 50px;
+        @media (max-width: 425px) {
+            gap: 30px;
+        }
         .about_headline {
             position: relative;
             display: flex;
@@ -21,6 +24,9 @@
                 @media (max-width: 425px) {
                     font-size: 4.5rem;
                 }
+                @media (max-width: 375px) {
+                    font-size: 3rem;
+                }
                 font-weight: bold;
                 color: rgb(0 0 0 / 10%);
                 z-index: -1;
@@ -29,6 +35,9 @@
                 font-size: 4rem;
                 @media (max-width: 425px) {
                     font-size: 3rem;
+                }
+                @media (max-width: 375px) {
+                    font-size: 2rem;
                 }
                 font-weight: bold;
                 color: $slate-blue;
@@ -62,6 +71,40 @@
                     font-size: 1.15rem;
                     font-weight: 600;
                     color: $slate-blue;
+                }
+            }
+            @media (max-width: 768px) {
+                .about_description {
+                    max-height: 250px;
+                    overflow: hidden;
+                    transition: max-height 0.3s ease;
+                    &.show_all {
+                        max-height: 1750px;
+                    }
+                    &.show_less {
+                        max-height: 250px;
+                    }
+                }
+                .about_showmore {
+                    .showmore_button {
+                        color: $slate-blue;
+                        font-size: 0.9rem;
+                        font-weight: 600;
+                        background-color: $white;
+                        border: solid 1px $slate-blue;
+                        border-radius: 4px;
+                        padding: 8px 10px;
+                        transition-duration: 300ms;
+                        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                        &:hover {
+                            background-color: $very-light-gray;
+                        }
+                    }
+                }
+            }
+            @media (min-width: 769px) {
+                .showmore_button {
+                    display: none;
                 }
             }
         }

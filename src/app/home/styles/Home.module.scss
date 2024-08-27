@@ -42,11 +42,17 @@
                 @media (max-width: 425px) {
                     font-size: 3rem;
                 }
+                @media (max-width: 375px) {
+                    font-size: 2rem;
+                }
                 font-weight: 700;
                 text-align: center;
             }
             .hero_subtitle {
                 font-size: 2rem;
+                @media (max-width: 375px) {
+                    font-size: 1.5rem;
+                }
                 font-weight: 500;
             }
         }

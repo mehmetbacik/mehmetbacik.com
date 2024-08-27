@@ -62,7 +62,7 @@ const Project: React.FC<ProjectProps> = ({ id }) => {
           <div className={styles.project_tab_headline}>
           <Swiper
               slidesPerView={1}
-              spaceBetween={15}
+              spaceBetween={10}
               pagination={{
                 clickable: true,
               }}
@@ -71,7 +71,7 @@ const Project: React.FC<ProjectProps> = ({ id }) => {
                   slidesPerView: 2,
                 },
                 "@0.75": {
-                  slidesPerView: 3,
+                  slidesPerView: 2,
                 },
                 "@1.00": {
                   slidesPerView: 4,
@@ -105,7 +105,7 @@ const Project: React.FC<ProjectProps> = ({ id }) => {
           <div className={styles.project_tags}>
             <Swiper
               slidesPerView={1}
-              spaceBetween={15}
+              spaceBetween={10}
               pagination={{
                 clickable: true,
               }}

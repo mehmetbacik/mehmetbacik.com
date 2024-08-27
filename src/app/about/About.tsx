@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import styles from "./styles/About.module.scss";
 
@@ -9,6 +9,8 @@ interface AboutProps {
 }
 
 const About: React.FC<AboutProps> = ({ id }) => {
+  const [showMore, setShowMore] = useState(false);
+
   return (
     <section id={id} className={`container mx-auto px-4 ${styles.about}`}>
       <div className={styles.about_content}>
@@ -18,14 +20,21 @@ const About: React.FC<AboutProps> = ({ id }) => {
         </div>
         <div className={styles.about_paragraph}>
           <div className={styles.about_image}>
-            <Image
-              src="/img/mb.jpg"
-              alt="Profile"
-              width={500}
-              height={500}
-            />
+            <Image src="/img/mb.jpg" alt="Profile" width={500} height={500} />
           </div>
-          <div className={styles.about_description}>
+          <div className={styles.about_showmore}>
+            <button
+              onClick={() => setShowMore(!showMore)}
+              className={styles.showmore_button}
+            >
+              {showMore ? "Show Less" : "Show More"}
+            </button>
+          </div>
+          <div
+            className={`${styles.about_description} ${
+              showMore ? styles.show_all : styles.show_less
+            }`}
+          >
             <p>
               As a Frontend Developer with over 6 years of experience, I have
               dedicated my career to crafting user-centric digital solutions
