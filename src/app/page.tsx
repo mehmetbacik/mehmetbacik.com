@@ -6,12 +6,15 @@ import Project from "@/app/project/Project";
 import Technology from "@/app/technology/Technology";
 import Contact from "@/app/contact/Contact";
 import Education from "@/app/education/Education";
+import { Montserrat } from 'next/font/google'
 import "@/styles/styles.scss";
+
+const montserrat = Montserrat({ subsets: ['latin'] })
 
 
 export default function MainPage() {
   return (
-    <>
+    <div className={montserrat.className}>
       <Sidebar />
       <main>
         <Home id="home" />
@@ -22,6 +25,6 @@ export default function MainPage() {
         <Project id="project" />
         <Contact id="contact" />
       </main>
-    </>
+    </div>
   );
 }
