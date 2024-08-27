@@ -68,6 +68,9 @@
             .technology_card_icons {
                 display: grid;
                 grid-template-columns: repeat(4, minmax(0, 1fr));
+                @media (max-width: 375px) {
+                    grid-template-columns: repeat(3, minmax(0, 1fr));
+                }
                 gap: 15px;
                 .technology_card_icons_content {
                     display: flex;

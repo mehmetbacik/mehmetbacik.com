@@ -76,10 +76,16 @@
                             object-fit: contain;
                         }
                         .experience_card_text {
+                            @media (max-width: 425px) {
+                                text-align: center;
+                            }
                             .experience_card_title {
                                 font-size: 1.2rem;
                                 color: $slate-blue;
                                 font-weight: 700;
+                                @media (max-width: 425px) {
+                                    font-size: 1rem;
+                                }
                             }
                             .experience_card_company {
                                 font-size: 1rem;
@@ -105,6 +111,9 @@
                                 .experience_card_technologies_item {
                                     display: flex;
                                     align-items: center;
+                                    @media (max-width: 425px) {
+                                        justify-content: center;
+                                    }
                                     .remaining_technologies {
                                         margin-left: 5px;
                                     }

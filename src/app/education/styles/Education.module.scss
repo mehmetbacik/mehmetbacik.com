@@ -68,14 +68,24 @@
                         display: flex;
                         align-items: center;
                         gap: 25px;
+                        @media (max-width: 425px) {
+                            flex-direction: column;
+                            gap: 15px;
+                        }
                         img {
                             object-fit: contain;
                         }
                         .education_card_text {
+                            @media (max-width: 425px) {
+                                text-align: center;
+                            }
                             .education_card_school {
                                 font-size: 1.2rem;
                                 color: $slate-blue;
                                 font-weight: 700;
+                                @media (max-width: 425px) {
+                                    font-size: 1rem;
+                                }
                             }
                             .education_card_content {
                                 font-size: 1rem;
