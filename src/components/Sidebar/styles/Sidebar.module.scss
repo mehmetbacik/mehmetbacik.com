@@ -5,6 +5,9 @@
     top: 0px;
     left: 0px;
     height: 100%;
+    @media (max-width: 767px) {
+        height: max-content;
+    }
     z-index: 50;
     padding: 20px;
     .mobile_menu_button {
