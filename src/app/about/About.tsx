@@ -36,7 +36,7 @@ const About: React.FC<AboutProps> = ({ id }) => {
             }`}
           >
             <p>
-              As a Frontend Developer with over 6 years of experience, I have
+              As a Frontend Developer with over 7 years of experience, I have
               dedicated my career to crafting user-centric digital solutions
               across various industries, including E-commerce, Localization,
               Technology, Advertising, and Insurance. My journey in these fields
