@@ -1,3 +1,4 @@
+import GoogleVerification from "@/components/GoogleVerification/GoogleVerification";
 import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
@@ -13,6 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <GoogleVerification />
+      </head>
       <body>
         <div className="flex">
           <div className="flex-1">{children}</div>
