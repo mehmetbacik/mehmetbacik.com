@@ -4,6 +4,14 @@ export const projectsData: ProjectsData = {
   frontend: [
     {
       id: "1",
+      title: "Easybank Landing Page",
+      url: "https://github.com/mehmetbacik/easybank-page",
+      description: "Landing page for a modern digital banking solution.",
+      image: "/project/frontend.svg",
+      tags: ["React.js", "Next.js", "TypeScript", "Sass", "TailwindCss"],
+    },
+    {
+      id: "2",
       title: "Listings With Filtering",
       url: "https://github.com/mehmetbacik/listings-with-filtering",
       description: "Job listing app with advanced filtering for postings.",
@@ -11,7 +19,7 @@ export const projectsData: ProjectsData = {
       tags: ["React.js", "Next.js", "TypeScript", "Sass", "TailwindCss"],
     },
     {
-      id: "2",
+      id: "3",
       title: "Horse Racing",
       url: "https://github.com/mehmetbacik/horse-racing",
       description:
@@ -28,7 +36,7 @@ export const projectsData: ProjectsData = {
       ],
     },
     {
-      id: "3",
+      id: "4",
       title: "Product Page",
       url: "https://github.com/mehmetbacik/product-page",
       description:
@@ -44,7 +52,7 @@ export const projectsData: ProjectsData = {
       ],
     },
     {
-      id: "4",
+      id: "5",
       title: "Rick and Morty App 1",
       url: "https://github.com/mehmetbacik/rickandmorty-app",
       description:
@@ -53,7 +61,7 @@ export const projectsData: ProjectsData = {
       tags: ["React.js", "TypeScript", "Redux", "Sass", "TailwindCss", "API"],
     },
     {
-      id: "5",
+      id: "6",
       title: "Project-X",
       url: "https://github.com/mehmetbacik/project-x",
       description:
@@ -69,7 +77,7 @@ export const projectsData: ProjectsData = {
       ],
     },
     {
-      id: "6",
+      id: "7",
       title: "URL-Shortening",
       url: "https://github.com/mehmetbacik/url-shortening",
       description:
@@ -78,7 +86,7 @@ export const projectsData: ProjectsData = {
       tags: ["React.js", "TypeScript", "Sass", "TailwindCss", "API"],
     },
     {
-      id: "7",
+      id: "8",
       title: "Rick and Morty App 2",
       url: "https://github.com/mehmetbacik/rick-and-morty-app",
       description:
@@ -87,7 +95,7 @@ export const projectsData: ProjectsData = {
       tags: ["Angular", "TypeScript", "Sass", "Bootstrap", "API"],
     },
     {
-      id: "8",
+      id: "9",
       title: "Rest Countries Api",
       url: "https://github.com/mehmetbacik/rest-countries-api",
       description: "Web app listing country details using Rest Countries API.",
@@ -95,7 +103,7 @@ export const projectsData: ProjectsData = {
       tags: ["React.js", "TypeScript", "Sass", "TailwindCss", "API"],
     },
     {
-      id: "9",
+      id: "10",
       title: "Calculator App",
       url: "https://github.com/mehmetbacik/calculator-app",
       description:
@@ -104,7 +112,7 @@ export const projectsData: ProjectsData = {
       tags: ["React.js", "TypeScript", "Sass", "TailwindCss"],
     },
     {
-      id: "10",
+      id: "11",
       title: "Multi-Step Form",
       url: "https://github.com/mehmetbacik/multi-step-form",
       description: "Interactive multi-step form for a form-filling experience.",
@@ -112,7 +120,7 @@ export const projectsData: ProjectsData = {
       tags: ["Vue.js", "CSS", "HTML", "Javascript"],
     },
     {
-      id: "11",
+      id: "12",
       title: "Interactive Comments",
       url: "https://github.com/mehmetbacik/interactive-comments",
       description:
@@ -121,7 +129,7 @@ export const projectsData: ProjectsData = {
       tags: ["Vue.js", "CSS", "HTML", "Javascript"],
     },
     {
-      id: "12",
+      id: "13",
       title: "Todo App",
       url: "https://github.com/mehmetbacik/todo",
       description:
@@ -130,7 +138,7 @@ export const projectsData: ProjectsData = {
       tags: ["Vue.js", "CSS", "HTML", "Javascript"],
     },
     {
-      id: "13",
+      id: "14",
       title: "Cart App",
       url: "https://github.com/mehmetbacik/cart-app",
       description:
@@ -139,7 +147,7 @@ export const projectsData: ProjectsData = {
       tags: ["Vue.js", "Vue Router", "CSS", "HTML", "Javascript"],
     },
     {
-      id: "14",
+      id: "15",
       title: "Landing Page Localization",
       url: "https://github.com/mehmetbacik/landing-page-localization",
       description:
@@ -148,7 +156,7 @@ export const projectsData: ProjectsData = {
       tags: ["React.js", "TailwindCss"],
     },
     {
-      id: "15",
+      id: "16",
       title: "Intro with Sign Up Form",
       url: "https://github.com/mehmetbacik/intro-with-sign-up-form",
       description: "Intro section with a sign-up form for user registration.",
@@ -156,7 +164,7 @@ export const projectsData: ProjectsData = {
       tags: ["React.js", "Formik", "Yup", "CSS"],
     },
     {
-      id: "16",
+      id: "17",
       title: "Weather App",
       url: "https://github.com/mehmetbacik/weather-app",
       description:
