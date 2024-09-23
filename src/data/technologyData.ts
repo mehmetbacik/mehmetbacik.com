@@ -45,6 +45,7 @@ export const technologyData = {
   ],
   testing: [
     { name: "Jest", icon: "logos:jest" },
+    { name: "Cypress", icon: "logos:cypress" },
     { name: "Selenium", icon: "logos:selenium" },
   ],
   editors: [
