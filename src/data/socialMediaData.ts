@@ -21,9 +21,4 @@ export const socialMediaData: SocialMediaItem[] = [
       url: "https://www.instagram.com/mehmetbacik/",
       icon: "fa6-brands:instagram",
     },
-    {
-      platform: "Email",
-      url: "mailto:mehmetbacikk@gmail.com",
-      icon: "mdi:at",
-    },
   ];
