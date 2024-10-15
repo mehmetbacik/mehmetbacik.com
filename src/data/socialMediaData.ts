@@ -12,11 +12,6 @@ export const socialMediaData: SocialMediaItem[] = [
       icon: "fa6-brands:github",
     },
     {
-      platform: "X (Twitter)",
-      url: "https://x.com/mehmetbacikk",
-      icon: "fa6-brands:x-twitter",
-    },
-    {
       platform: "Instagram",
       url: "https://www.instagram.com/mehmetbacik/",
       icon: "fa6-brands:instagram",
