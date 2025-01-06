@@ -4,11 +4,11 @@ export const projectsData: ProjectsData = {
   frontend: [
     {
       id: "1",
-      title: "Easybank Landing Page",
-      url: "https://github.com/mehmetbacik/easybank-page",
-      description: "Landing page for a modern digital banking solution.",
+      title: "Flight Routes",
+      url: "https://github.com/mehmetbacik/flight-routes",
+      description: "Flight Routes is a simple platform for quick flight search and booking.",
       image: "/project/frontend.svg",
-      tags: ["React.js", "Next.js", "TypeScript", "Sass", "TailwindCss"],
+      tags: ["React.js", "Next.js", "TypeScript", "Sass", "Cypress", "Redux"],
     },
     {
       id: "2",
@@ -171,6 +171,14 @@ export const projectsData: ProjectsData = {
         "Weather app that provides weather updates and forecasts for various locations.",
       image: "/project/frontend.svg",
       tags: ["React.js", "CSS"],
+    },
+    {
+      id: "18",
+      title: "Easybank Landing Page",
+      url: "https://github.com/mehmetbacik/easybank-page",
+      description: "Landing page for a modern digital banking solution.",
+      image: "/project/frontend.svg",
+      tags: ["React.js", "Next.js", "TypeScript", "Sass", "TailwindCss"],
     },
   ],
   backend: [
