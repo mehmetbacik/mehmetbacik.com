@@ -26,7 +26,7 @@ export const technologyData = {
     { name: "PHP", icon: "logos:php" },
     { name: "C", icon: "logos:c" },
     { name: "MySQL", icon: "logos:mysql" },
-    { name: "MongoDB", icon: "logos:mongodb" },
+    { name: "MongoDB", icon: "logos:mongodb-icon" },
     { name: "Swagger", icon: "logos:swagger" },
   ],
   development_tools: [
