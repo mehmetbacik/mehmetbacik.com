@@ -2,6 +2,21 @@ import { ExperienceItem } from "../types/types";
 
 export const experienceData: ExperienceItem[] = [
   {
+    title: "Frontend Developer",
+    company: "Hogarth",
+    date: "Jan 2025 - Present",
+    description: `As a Frontend Developer in the advertising industry, I specialized in developing dynamic and attention-grabbing web 
+      interfaces to effectively present advertising campaigns. I designed and built multilingual web applications that catered 
+      to different languages and cultures, ensuring compliance with localization requirements. My role involved creating high-performance 
+      solutions and integrating them with various advertising platforms and tools to deliver seamless user experiences. Additionally, 
+      I focused on optimizing frontend performance, enhancing cross-browser compatibility, and presenting creative content effectively. 
+      I utilized Agile methodologies to streamline development processes and deliver innovative features that met both client expectations 
+      and industry standards.`,
+    technology:
+      "HTML - CSS - Javascript - Yarn - SVN - Python - Docker - BBEdit - Xcode - VS Code - Radar",
+    logo: "/img/hogarth.jpg",
+  },
+  {
     title: "Frontend Team Lead",
     company: "Ekspar",
     date: "Nov 2023 - Jul 2024",
