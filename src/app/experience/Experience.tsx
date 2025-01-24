@@ -41,7 +41,7 @@ const Experience: React.FC<ExperienceProps> = ({ id }) => {
 
   const visibleExperiences = showAll
     ? experienceData
-    : experienceData.slice(0, 3);
+    : experienceData.slice(0, 4);
 
   return (
     <section id={id} className={`container mx-auto px-4 ${styles.experience}`}>
