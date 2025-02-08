@@ -184,6 +184,14 @@ export const projectsData: ProjectsData = {
   backend: [
     {
       id: "1",
+      title: "Blog Management",
+      url: "https://github.com/mehmetbacik/blog-management",
+      description: "Role-based full-stack blog system with real-time updates and a modern responsive design.",
+      image: "/project/backend.svg",
+      tags: ["React.js", "Next.js", "TypeScript", "Sass", "Jest", "Context API", "Node.js", "Express.js", "MongoDB"],
+    },
+    {
+      id: "2",
       title: "E-Commerce",
       url: "https://github.com/mehmetbacik/e-commerce",
       description:
@@ -192,7 +200,7 @@ export const projectsData: ProjectsData = {
       tags: ["PHP", "SQL", "Sass", "Javascript", "HTML", "CSS"],
     },
     {
-      id: "2",
+      id: "3",
       title: "HTML Sorting Tool",
       url: "https://github.com/mehmetbacik/html-sorter.py",
       description:
