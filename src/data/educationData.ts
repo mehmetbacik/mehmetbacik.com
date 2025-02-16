@@ -16,13 +16,6 @@ export const educationData: EducationItem[] = [
     logo: "/img/nisantasiuni_logo.jpg",
   },
   {
-    school: "Anadolu University",
-    degree: "Associate's Degree",
-    study: "Social Media Management",
-    date: "2024 - 2026",
-    logo: "/img/anadoluuni_logo.jpg",
-  },
-  {
     school: "Inonu Technical High School",
     degree: "High School Degree",
     study: "Information Technology (Web Design and Programming)",
