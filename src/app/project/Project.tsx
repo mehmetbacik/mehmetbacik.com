@@ -73,7 +73,7 @@ const Project: React.FC<ProjectProps> = ({ id }) => {
                   slidesPerView: 4,
                 },
                 "@1.50": {
-                  slidesPerView: 4,
+                  slidesPerView: 6,
                 },
               }}
               freeMode={true}

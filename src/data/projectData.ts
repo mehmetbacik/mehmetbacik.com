@@ -6,7 +6,8 @@ export const projectsData: ProjectsData = {
       id: "1",
       title: "Flight Routes",
       url: "https://github.com/mehmetbacik/flight-routes",
-      description: "Flight Routes is a simple platform for quick flight search and booking.",
+      description:
+        "Flight Routes is a simple platform for quick flight search and booking.",
       image: "/project/frontend.svg",
       tags: ["React.js", "Next.js", "TypeScript", "Sass", "Cypress", "Redux"],
     },
@@ -14,9 +15,18 @@ export const projectsData: ProjectsData = {
       id: "2",
       title: "Rock Paper Scissors Game",
       url: "https://github.com/mehmetbacik/rps-game",
-      description: "A modern version of the classic Rock, Paper, Scissors game, featuring Lizard and Spock.",
+      description:
+        "A modern version of the classic Rock, Paper, Scissors game, featuring Lizard and Spock.",
       image: "/project/frontend.svg",
-      tags: ["React.js", "Next.js", "TypeScript", "Sass", "Jest", "Context API", "Framer Motion"],
+      tags: [
+        "React.js",
+        "Next.js",
+        "TypeScript",
+        "Sass",
+        "Jest",
+        "Context API",
+        "Framer Motion",
+      ],
     },
     {
       id: "3",
@@ -192,29 +202,21 @@ export const projectsData: ProjectsData = {
   backend: [
     {
       id: "1",
-      title: "Blog Management",
-      url: "https://github.com/mehmetbacik/blog-management",
-      description: "Role-based full-stack blog system with real-time updates and a modern responsive design.",
-      image: "/project/backend.svg",
-      tags: ["React.js", "Next.js", "TypeScript", "Sass", "Jest", "Context API", "Node.js", "Express.js", "MongoDB"],
-    },
-    {
-      id: "2",
-      title: "E-Commerce",
-      url: "https://github.com/mehmetbacik/e-commerce",
-      description:
-        "Source code for an E-Commerce site with product management and a dedicated admin panel.",
-      image: "/project/backend.svg",
-      tags: ["PHP", "SQL", "Sass", "Javascript", "HTML", "CSS"],
-    },
-    {
-      id: "3",
       title: "HTML Sorting Tool",
       url: "https://github.com/mehmetbacik/html-sorter.py",
       description:
         "Python script sorts <ul> lists and <li> elements by country, saving results to 'sorting_output'.",
       image: "/project/backend.svg",
       tags: ["Python"],
+    },
+        {
+      id: "2",
+      title: "Comment Scraper",
+      url: "https://github.com/mehmetbacik/comment-scraping",
+      description:
+        "A web scraping application utilizing Scrapy and Selenium to extract product comments from an e-commerce platform. Features a simple frontend for displaying the collected data.",
+      image: "/project/backend.svg",
+      tags: ["Python", "Scrapy", "Selenium", "HTML", "CSS", "Javascript"],
     },
   ],
   design: [
@@ -345,6 +347,47 @@ export const projectsData: ProjectsData = {
       tags: ["HTML", "CSS", "React.js", "Bootstrap"],
     },
   ],
+  mobile: [
+    {
+      id: "1",
+      title: "Mood Tracker",
+      url: "https://github.com/mehmetbacik/mood-tracker",
+      description:
+        "Track your daily moods with a clean, minimal, and intuitive React Native app built using Expo.",
+      image: "/project/mobile.svg",
+      tags: ["React-Native", "Expo", "TypeScript"],
+    },
+  ],
+  fullstack: [
+    {
+      id: "1",
+      title: "Blog Management",
+      url: "https://github.com/mehmetbacik/blog-management",
+      description:
+        "Role-based full-stack blog system with real-time updates and a modern responsive design.",
+      image: "/project/fullstack.svg",
+      tags: [
+        "React.js",
+        "Next.js",
+        "TypeScript",
+        "Sass",
+        "Jest",
+        "Context API",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+      ],
+    },
+    {
+      id: "2",
+      title: "E-Commerce",
+      url: "https://github.com/mehmetbacik/e-commerce",
+      description:
+        "Source code for an E-Commerce site with product management and a dedicated admin panel.",
+      image: "/project/fullstack.svg",
+      tags: ["PHP", "SQL", "Sass", "Javascript", "HTML", "CSS"],
+    },
+  ],
   erasmus: [
     {
       id: "1",
@@ -362,22 +405,18 @@ export const projectsData: ProjectsData = {
         "Czech Republic",
         "Belgium",
         "Bulgaria",
-        "Italy"
+        "Italy",
       ],
     },
     {
       id: "2",
-      title: "Promoting English as Means of Communication in European Adult Education",
+      title:
+        "Promoting English as Means of Communication in European Adult Education",
       url: "https://pemceae.blogspot.com/",
       description:
         "Grundtvig - Education and Culture DG Lifelong Learning Programme",
       image: "/project/erasmus.svg",
-      tags: [
-        "Spain",
-        "Italy",
-        "Romania",
-        "Turkiye"
-      ],
+      tags: ["Spain", "Italy", "Romania", "Turkiye"],
     },
     {
       id: "3",
@@ -386,12 +425,7 @@ export const projectsData: ProjectsData = {
       description:
         "Erasmus+ - Education and Culture Lifelong Learning Programme",
       image: "/project/erasmus.svg",
-      tags: [
-        "Spain",
-        "Turkiye",
-        "Bulgaria",
-        "Slovenia"
-      ],
+      tags: ["Spain", "Turkiye", "Bulgaria", "Slovenia"],
     },
   ],
 };
