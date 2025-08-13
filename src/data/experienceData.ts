@@ -125,6 +125,7 @@ export const technologyIconMapping: { [key: string]: string } = {
   "Azure Devops": "cib:azure-devops",
   Radar: "logos:apple-app-store",
   Trello: "logos:trello",
+  Jira: "logos:jira",
   Figma: "logos:figma",
   Sketch: "logos:sketch",
   "Adobe Xd": "logos:adobe-xd",
