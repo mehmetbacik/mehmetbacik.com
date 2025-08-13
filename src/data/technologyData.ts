@@ -2,7 +2,6 @@ export const technologyData = {
   frontend: [
     { name: "React.js", icon: "logos:react" },
     { name: "Vue.js", icon: "logos:vue" },
-    { name: "Angular", icon: "logos:angular-icon" },
     { name: "Next.js", icon: "logos:nextjs-icon" },
     { name: "Typescript", icon: "logos:typescript-icon" },
     { name: "Vite", icon: "logos:vitejs" },
