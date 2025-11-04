@@ -3,7 +3,25 @@ import { ProjectsData } from "@/types/types";
 export const projectsData: ProjectsData = {
   frontend: [
     {
-      id: "1",
+      id: "21",
+      title: "Travel Planner",
+      url: "https://github.com/mehmetbacik/travel-planner",
+      description:
+        "Travel Planner creates personalized itineraries with sightseeing, events, dining, local tips, and transport recommendations, all exportable as PDF.",
+      image: "/project/frontend.svg",
+      tags: ["React.js", "Next.js", "TypeScript", "Sass", "Context API", "i18next", "Framer Motion", "Swiper"],
+    },
+    {
+      id: "20",
+      title: "Easy Exchange",
+      url: "https://github.com/mehmetbacik/easy-exchange",
+      description:
+        "A modern and responsive currency converter built with Next.js, TypeScript, and SCSS providing real-time exchange rates, clean UI, and scalable architecture.",
+      image: "/project/frontend.svg",
+      tags: ["React.js", "Next.js", "TypeScript", "Sass"],
+    },
+    {
+      id: "19",
       title: "Flight Routes",
       url: "https://github.com/mehmetbacik/flight-routes",
       description:
@@ -12,7 +30,7 @@ export const projectsData: ProjectsData = {
       tags: ["React.js", "Next.js", "TypeScript", "Sass", "Cypress", "Redux"],
     },
     {
-      id: "2",
+      id: "18",
       title: "Rock Paper Scissors Game",
       url: "https://github.com/mehmetbacik/rps-game",
       description:
@@ -29,7 +47,7 @@ export const projectsData: ProjectsData = {
       ],
     },
     {
-      id: "3",
+      id: "17",
       title: "Listings With Filtering",
       url: "https://github.com/mehmetbacik/listings-with-filtering",
       description: "Job listing app with advanced filtering for postings.",
@@ -37,7 +55,7 @@ export const projectsData: ProjectsData = {
       tags: ["React.js", "Next.js", "TypeScript", "Sass", "TailwindCss"],
     },
     {
-      id: "4",
+      id: "16",
       title: "Horse Racing",
       url: "https://github.com/mehmetbacik/horse-racing",
       description:
@@ -54,7 +72,7 @@ export const projectsData: ProjectsData = {
       ],
     },
     {
-      id: "5",
+      id: "15",
       title: "Product Page",
       url: "https://github.com/mehmetbacik/product-page",
       description:
@@ -70,7 +88,7 @@ export const projectsData: ProjectsData = {
       ],
     },
     {
-      id: "6",
+      id: "14",
       title: "Rick and Morty App 1",
       url: "https://github.com/mehmetbacik/rickandmorty-app",
       description:
@@ -79,7 +97,7 @@ export const projectsData: ProjectsData = {
       tags: ["React.js", "TypeScript", "Redux", "Sass", "TailwindCss", "API"],
     },
     {
-      id: "7",
+      id: "13",
       title: "Project-X",
       url: "https://github.com/mehmetbacik/project-x",
       description:
@@ -95,7 +113,7 @@ export const projectsData: ProjectsData = {
       ],
     },
     {
-      id: "8",
+      id: "12",
       title: "URL-Shortening",
       url: "https://github.com/mehmetbacik/url-shortening",
       description:
@@ -104,7 +122,7 @@ export const projectsData: ProjectsData = {
       tags: ["React.js", "TypeScript", "Sass", "TailwindCss", "API"],
     },
     {
-      id: "9",
+      id: "11",
       title: "Rick and Morty App 2",
       url: "https://github.com/mehmetbacik/rick-and-morty-app",
       description:
@@ -121,7 +139,7 @@ export const projectsData: ProjectsData = {
       tags: ["React.js", "TypeScript", "Sass", "TailwindCss", "API"],
     },
     {
-      id: "11",
+      id: "9",
       title: "Calculator App",
       url: "https://github.com/mehmetbacik/calculator-app",
       description:
@@ -130,7 +148,7 @@ export const projectsData: ProjectsData = {
       tags: ["React.js", "TypeScript", "Sass", "TailwindCss"],
     },
     {
-      id: "12",
+      id: "8",
       title: "Multi-Step Form",
       url: "https://github.com/mehmetbacik/multi-step-form",
       description: "Interactive multi-step form for a form-filling experience.",
@@ -138,7 +156,7 @@ export const projectsData: ProjectsData = {
       tags: ["Vue.js", "CSS", "HTML", "Javascript"],
     },
     {
-      id: "13",
+      id: "7",
       title: "Interactive Comments",
       url: "https://github.com/mehmetbacik/interactive-comments",
       description:
@@ -147,7 +165,7 @@ export const projectsData: ProjectsData = {
       tags: ["Vue.js", "CSS", "HTML", "Javascript"],
     },
     {
-      id: "14",
+      id: "6",
       title: "Todo App",
       url: "https://github.com/mehmetbacik/todo",
       description:
@@ -156,7 +174,7 @@ export const projectsData: ProjectsData = {
       tags: ["Vue.js", "CSS", "HTML", "Javascript"],
     },
     {
-      id: "15",
+      id: "5",
       title: "Cart App",
       url: "https://github.com/mehmetbacik/cart-app",
       description:
@@ -165,7 +183,7 @@ export const projectsData: ProjectsData = {
       tags: ["Vue.js", "Vue Router", "CSS", "HTML", "Javascript"],
     },
     {
-      id: "16",
+      id: "4",
       title: "Landing Page Localization",
       url: "https://github.com/mehmetbacik/landing-page-localization",
       description:
@@ -174,7 +192,7 @@ export const projectsData: ProjectsData = {
       tags: ["React.js", "TailwindCss"],
     },
     {
-      id: "17",
+      id: "3",
       title: "Intro with Sign Up Form",
       url: "https://github.com/mehmetbacik/intro-with-sign-up-form",
       description: "Intro section with a sign-up form for user registration.",
@@ -182,7 +200,7 @@ export const projectsData: ProjectsData = {
       tags: ["React.js", "Formik", "Yup", "CSS"],
     },
     {
-      id: "18",
+      id: "2",
       title: "Weather App",
       url: "https://github.com/mehmetbacik/weather-app",
       description:
@@ -191,7 +209,7 @@ export const projectsData: ProjectsData = {
       tags: ["React.js", "CSS"],
     },
     {
-      id: "19",
+      id: "1",
       title: "Easybank Landing Page",
       url: "https://github.com/mehmetbacik/easybank-page",
       description: "Landing page for a modern digital banking solution.",
@@ -201,7 +219,7 @@ export const projectsData: ProjectsData = {
   ],
   backend: [
     {
-      id: "1",
+      id: "2",
       title: "HTML Sorting Tool",
       url: "https://github.com/mehmetbacik/html-sorter.py",
       description:
@@ -209,8 +227,8 @@ export const projectsData: ProjectsData = {
       image: "/project/backend.svg",
       tags: ["Python"],
     },
-        {
-      id: "2",
+    {
+      id: "1",
       title: "Comment Scraper",
       url: "https://github.com/mehmetbacik/comment-scraping",
       description:
@@ -221,7 +239,7 @@ export const projectsData: ProjectsData = {
   ],
   design: [
     {
-      id: "1",
+      id: "14",
       title: "Testimonials Section",
       url: "https://github.com/mehmetbacik/testimonials-section",
       description:
@@ -230,7 +248,7 @@ export const projectsData: ProjectsData = {
       tags: ["HTML", "CSS", "Bootstrap", "Sass"],
     },
     {
-      id: "2",
+      id: "13",
       title: "News Homepage",
       url: "https://github.com/mehmetbacik/news-homepage",
       description:
@@ -239,7 +257,7 @@ export const projectsData: ProjectsData = {
       tags: ["HTML", "CSS", "Bootstrap", "Sass", "Javascript"],
     },
     {
-      id: "3",
+      id: "12",
       title: "Social Proof Section",
       url: "https://github.com/mehmetbacik/social-proof-section",
       description:
@@ -248,7 +266,7 @@ export const projectsData: ProjectsData = {
       tags: ["HTML", "CSS", "Bootstrap", "Sass"],
     },
     {
-      id: "4",
+      id: "11",
       title: "Huddle Landing Page",
       url: "https://github.com/mehmetbacik/Huddle-Landing-Page",
       description:
@@ -257,7 +275,7 @@ export const projectsData: ProjectsData = {
       tags: ["HTML", "CSS", "Bootstrap", "Sass"],
     },
     {
-      id: "5",
+      id: "10",
       title: "Intro Section with Dropdown Navigation",
       url: "https://github.com/mehmetbacik/Intro-section-with-dropdown-navigation",
       description:
@@ -266,7 +284,7 @@ export const projectsData: ProjectsData = {
       tags: ["HTML", "CSS", "Bootstrap", "Sass", "Javascript"],
     },
     {
-      id: "6",
+      id: "9",
       title: "Interactive Rating Component",
       url: "https://github.com/mehmetbacik/Interactive-Rating-Component",
       description:
@@ -275,7 +293,7 @@ export const projectsData: ProjectsData = {
       tags: ["HTML", "CSS", "Sass", "Javascript"],
     },
     {
-      id: "7",
+      id: "8",
       title: "Redesign T3",
       url: "https://github.com/mehmetbacik/redesign-t3",
       description:
@@ -284,7 +302,7 @@ export const projectsData: ProjectsData = {
       tags: ["HTML", "CSS", "Javascript"],
     },
     {
-      id: "8",
+      id: "7",
       title: "Time Tracking Dashboard",
       url: "https://github.com/mehmetbacik/time-tracking-dashboard",
       description:
@@ -293,7 +311,7 @@ export const projectsData: ProjectsData = {
       tags: ["HTML", "CSS", "Bootstrap", "Sass", "Javascript"],
     },
     {
-      id: "9",
+      id: "6",
       title: "Fylo Landing Page",
       url: "https://github.com/mehmetbacik/fylo-landing-page",
       description:
@@ -302,7 +320,7 @@ export const projectsData: ProjectsData = {
       tags: ["HTML", "CSS", "Bootstrap", "Sass", "Javascript"],
     },
     {
-      id: "10",
+      id: "5",
       title: "SunnySide Agency Landing Page",
       url: "https://github.com/mehmetbacik/sunnyside-agency-landing-page",
       description:
@@ -311,7 +329,7 @@ export const projectsData: ProjectsData = {
       tags: ["HTML", "CSS", "Bootstrap", "Sass", "Javascript"],
     },
     {
-      id: "11",
+      id: "4",
       title: "Bookmark Landing Page",
       url: "https://github.com/mehmetbacik/bookmark-page",
       description:
@@ -320,7 +338,7 @@ export const projectsData: ProjectsData = {
       tags: ["HTML", "CSS", "Bootstrap", "Sass", "Javascript"],
     },
     {
-      id: "12",
+      id: "3",
       title: "Redesign LinkedIn",
       url: "https://github.com/mehmetbacik/redesign-linkedin",
       description:
@@ -329,7 +347,7 @@ export const projectsData: ProjectsData = {
       tags: ["HTML", "CSS", "Bootstrap", "Javascript"],
     },
     {
-      id: "13",
+      id: "2",
       title: "Space Multi-Page Website",
       url: "https://github.com/mehmetbacik/space-multi-page-website",
       description:
@@ -338,7 +356,7 @@ export const projectsData: ProjectsData = {
       tags: ["HTML", "CSS", "Sass", "Bootstrap", "Javascript"],
     },
     {
-      id: "14",
+      id: "1",
       title: "Clipboard Page",
       url: "https://github.com/mehmetbacik/clipboard-page",
       description:
@@ -360,7 +378,7 @@ export const projectsData: ProjectsData = {
   ],
   fullstack: [
     {
-      id: "1",
+      id: "2",
       title: "Blog Management",
       url: "https://github.com/mehmetbacik/blog-management",
       description:
@@ -379,7 +397,7 @@ export const projectsData: ProjectsData = {
       ],
     },
     {
-      id: "2",
+      id: "1",
       title: "E-Commerce",
       url: "https://github.com/mehmetbacik/e-commerce",
       description:
@@ -390,7 +408,7 @@ export const projectsData: ProjectsData = {
   ],
   erasmus: [
     {
-      id: "1",
+      id: "3",
       title: "European School Radio",
       url: "https://europeanschoolradio.blogspot.com/",
       description:
@@ -414,16 +432,16 @@ export const projectsData: ProjectsData = {
         "Promoting English as Means of Communication in European Adult Education",
       url: "https://pemceae.blogspot.com/",
       description:
-        "Grundtvig - Education and Culture DG Lifelong Learning Programme",
+        "Pemceae - Education and Culture Lifelong Learning Programme",
       image: "/project/erasmus.svg",
       tags: ["Spain", "Italy", "Romania", "Turkiye"],
     },
     {
-      id: "3",
+      id: "1",
       title: "Growing Outdoor Agrotourism Learning",
       url: "https://tbssgoal.blogspot.com/",
       description:
-        "Erasmus+ - Education and Culture Lifelong Learning Programme",
+        "Goal - Education and Culture Lifelong Learning Programme",
       image: "/project/erasmus.svg",
       tags: ["Spain", "Turkiye", "Bulgaria", "Slovenia"],
     },
