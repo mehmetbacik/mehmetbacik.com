@@ -2,8 +2,8 @@
 
 import React, { useState } from "react";
 import { Icon } from "@iconify/react";
-import styles from "./styles/Technology.module.scss";
-import { technologyData } from "@/data/technologyData";
+import styles from "./styles/TechnologyCard.module.scss";
+import { technologyData } from "@/data/technologyCardData";
 
 interface TechnologyProps {
   id: string;

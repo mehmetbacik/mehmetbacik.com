@@ -3,7 +3,7 @@ import Home from "@/app/home/Home";
 import About from "@/app/about/About";
 import Experience from "@/app/experience/Experience";
 import Project from "@/app/project/Project";
-import Technology from "@/app/technology/Technology";
+import Technology from "@/app/technology/TechnologyCard";
 import Contact from "@/app/contact/Contact";
 import Education from "@/app/education/Education";
 import { Montserrat } from 'next/font/google'
