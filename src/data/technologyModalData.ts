@@ -2,7 +2,7 @@ export const technologyData = {
   frontend: {
     title: "Frontend Development",
     description:
-      "Technologies used to build interactive and visually engaging user interfaces. They focus on how users experience and interact with web applications directly in the browser.",
+      "Frontend development focuses on creating interactive, visually engaging, and user-friendly interfaces that define how users experience and interact with web applications directly in the browser.",
     items: [
       { name: "React.js", icon: "logos:react" },
       { name: "Vue.js", icon: "logos:vue" },
@@ -27,7 +27,7 @@ export const technologyData = {
   backend: {
     title: "Backend Development",
     description:
-      "Technologies responsible for server-side logic, database management, and API integrations. They handle data processing and communication between the frontend and the database.",
+      "Backend development handles the server-side logic, database management, and API communication that power web applications and connect them with user-facing interfaces.",
     items: [
       { name: "Node.js", icon: "logos:nodejs-icon" },
       { name: "Python", icon: "logos:python" },
@@ -41,7 +41,7 @@ export const technologyData = {
   development_tools: {
     title: "Development Tools",
     description:
-      "Utilities that assist developers in building, testing, deploying, and managing software efficiently. They help automate workflows and improve productivity.",
+      "Development tools streamline the process of building, testing, deploying, and maintaining software by improving efficiency, automating workflows, and simplifying complex tasks.",
     items: [
       { name: "Docker", icon: "logos:docker-icon" },
       { name: "Git", icon: "logos:git-icon" },
@@ -53,7 +53,7 @@ export const technologyData = {
   design: {
     title: "Design & Creative Tools",
     description:
-      "Applications used for creating UI/UX designs, visual assets, and prototypes. They play a key role in shaping the visual identity and user experience of digital products.",
+      "Design and creative tools are used to craft user interfaces, prototypes, and visual assets that shape the aesthetic identity and usability of digital products.",
     items: [
       { name: "Figma", icon: "logos:figma" },
       { name: "Sketch", icon: "logos:sketch" },
@@ -66,7 +66,7 @@ export const technologyData = {
   testing: {
     title: "Testing & QA",
     description:
-      "Frameworks and tools used to verify the functionality, performance, and reliability of software. They ensure code quality and a smooth user experience.",
+      "Testing and QA ensure that software functions correctly, performs efficiently, and provides a seamless experience through automated and manual verification processes.",
     items: [
       { name: "Jest", icon: "logos:jest" },
       { name: "Cypress", icon: "logos:cypress" },
@@ -76,7 +76,7 @@ export const technologyData = {
   editors: {
     title: "Code Editors",
     description:
-      "Integrated development environments (IDEs) and editors that provide features for writing, debugging, and organizing code efficiently.",
+      "Code editors and IDEs provide structured environments for writing, debugging, and organizing code efficiently, enabling developers to maintain high-quality workflows.",
     items: [
       { name: "VS Code", icon: "logos:visual-studio-code" },
       { name: "Xcode", icon: "logos:xcode" },
@@ -89,30 +89,30 @@ export const technologyData = {
   project_management: {
     title: "Project Management",
     description:
-      "Platforms that help teams plan, track, and collaborate on projects. They streamline workflows and improve communication across development teams.",
+      "Project management focuses on planning, tracking, and coordinating tasks within development teams to ensure efficient collaboration and timely delivery of projects.",
     items: [
       { name: "Trello", icon: "logos:trello" },
       { name: "Radar", icon: "logos:apple-app-store" },
       { name: "Jira", icon: "logos:jira" },
     ],
   },
-  cms: {
-    title: "Content Management Systems (CMS)",
-    description:
-      "Software solutions that enable users to create, edit, and manage digital content on websites without requiring deep technical knowledge.",
-    items: [
-      { name: "Wordpress", icon: "logos:wordpress" },
-      { name: "Opencart", icon: "logos:opencart" },
-      { name: "Blogger", icon: "logos:blogger" },
-    ],
-  },
   version_control: {
     title: "Version Control",
     description:
-      "Systems that track code changes, manage different versions, and support collaboration among developers working on the same project.",
+      "Version control systems manage code changes, maintain revision history, and support collaborative development by allowing multiple contributors to work seamlessly together.",
     items: [
       { name: "Github", icon: "logos:github-icon" },
       { name: "SVN", icon: "logos:subversion" },
     ],
   },
+  cms: {
+    title: "Content Management Systems (CMS)",
+    description:
+      "Content management systems enable the creation, editing, and organization of digital content on websites, making it easy to maintain and publish information without advanced technical knowledge.",
+    items: [
+      { name: "Wordpress", icon: "logos:wordpress" },
+      { name: "Opencart", icon: "logos:opencart" },
+      { name: "Blogger", icon: "logos:blogger" },
+    ],
+  }
 };

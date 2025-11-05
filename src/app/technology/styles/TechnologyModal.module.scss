@@ -87,6 +87,7 @@
                 font-size: 1.2rem;
                 color: $slate-blue;
                 font-weight: 700;
+                margin-bottom: 10px;
                 @media (max-width: 425px) {
                   font-size: 1rem;
                 }
@@ -95,13 +96,12 @@
                 font-size: 1rem;
                 color: $slate-blue;
                 font-weight: 500;
-                margin-bottom: 10px;
+                margin-bottom: 15px;
               }
               .technology_card_icons {
                 display: flex;
                 align-items: center;
                 gap: 8px;
-                margin-top: 10px;
                 @media (max-width: 425px) {
                   justify-content: center;
                 }
@@ -111,22 +111,19 @@
                   justify-content: center;
                   background-color: rgba(255, 255, 255, 0.1);
                   border-radius: 8px;
-                  padding: 6px;
                   transition: transform 0.2s ease;
                   &:hover {
                     transform: scale(1.1);
                   }
                   svg {
-                    width: 22px;
-                    height: 22px;
+                    width: 25px;
+                    height: 25px;
                   }
                 }
                 .tech_more {
                   font-size: 0.9rem;
                   font-weight: 500;
                   color: $slate-blue;
-                  margin-left: 4px;
-                  opacity: 0.8;
                 }
               }
             }
@@ -163,10 +160,6 @@
             font-size: 1rem;
             color: $slate-blue;
             font-weight: 400;
-            @media (max-width: 425px) {
-              overflow-y: scroll;
-              height: 300px;
-            }
           }
           .technology_popup_tech_used {
             margin-top: 20px;

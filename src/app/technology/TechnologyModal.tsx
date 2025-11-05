@@ -118,8 +118,8 @@ const Technology: React.FC<TechnologyProps> = ({ id }) => {
                               >
                                 <Icon
                                   icon={tech.icon}
-                                  width="18"
-                                  height="18"
+                                  width="30"
+                                  height="30"
                                   className="text-blue-500"
                                 />
                                 <span className={styles.tech_used_item_title}>
