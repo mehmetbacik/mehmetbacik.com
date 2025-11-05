@@ -61,7 +61,7 @@ const Technology: React.FC<TechnologyProps> = ({ id }) => {
                   <div className={styles.technology_card_content}>
                     <div className={styles.technology_card_text}>
                       <h3 className={styles.technology_card_title}>
-                        {item.title}
+                        {truncateText(item.title, 25)}
                       </h3>
                       <p className={styles.technology_card_description}>
                         {truncateText(item.description, 100)}

@@ -50,6 +50,14 @@
       grid-template-columns: repeat(3, minmax(100px, 1fr));
       grid-template-rows: repeat(3, minmax(100px, 1fr));
       gap: 30px;
+      @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+        grid-template-rows: auto;
+      }
+      @media (max-width: 425px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+      }
       .technology_list_item {
         width: 100%;
         cursor: pointer;
@@ -94,6 +102,9 @@
                 align-items: center;
                 gap: 8px;
                 margin-top: 10px;
+                @media (max-width: 425px) {
+                  justify-content: center;
+                }
                 .tech_icon_wrapper {
                   display: flex;
                   align-items: center;
