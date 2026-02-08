@@ -3,13 +3,38 @@ import { ProjectsData } from "@/types/types";
 export const projectsData: ProjectsData = {
   frontend: [
     {
+      id: "22",
+      title: "Cooking Blog",
+      url: "https://github.com/mehmetbacik/cooking-blog",
+      description:
+        "Cooking Blog is a modern frontend web app for discovering recipes, exploring categories, and following step-by-step cooking guides.",
+      image: "/project/frontend.svg",
+      tags: [
+        "Vue.js",
+        "Nuxt",
+        "TypeScript",
+        "Sass",
+        "Vue Router",
+        "Swiper",
+      ],
+    },
+    {
       id: "21",
       title: "Travel Planner",
       url: "https://github.com/mehmetbacik/travel-planner",
       description:
         "Travel Planner creates personalized itineraries with sightseeing, events, dining, local tips, and transport recommendations, all exportable as PDF.",
       image: "/project/frontend.svg",
-      tags: ["React.js", "Next.js", "TypeScript", "Sass", "Context API", "i18next", "Framer Motion", "Swiper"],
+      tags: [
+        "React.js",
+        "Next.js",
+        "TypeScript",
+        "Sass",
+        "Context API",
+        "i18next",
+        "Framer Motion",
+        "Swiper",
+      ],
     },
     {
       id: "20",
@@ -440,8 +465,7 @@ export const projectsData: ProjectsData = {
       id: "1",
       title: "Growing Outdoor Agrotourism Learning",
       url: "https://tbssgoal.blogspot.com/",
-      description:
-        "Goal - Education and Culture Lifelong Learning Programme",
+      description: "Goal - Education and Culture Lifelong Learning Programme",
       image: "/project/erasmus.svg",
       tags: ["Spain", "Turkiye", "Bulgaria", "Slovenia"],
     },

@@ -3,6 +3,7 @@ export const technologyData = {
     { name: "React.js", icon: "logos:react" },
     { name: "Vue.js", icon: "logos:vue" },
     { name: "Next.js", icon: "logos:nextjs-icon" },
+    { name: "Nuxt", icon: "logos:nuxt-icon" },
     { name: "Typescript", icon: "logos:typescript-icon" },
     { name: "Vite", icon: "logos:vitejs" },
     { name: "React Router", icon: "logos:react-router" },
@@ -31,7 +32,7 @@ export const technologyData = {
   development_tools: [
     { name: "Docker", icon: "logos:docker-icon" },
     { name: "Git", icon: "logos:git-icon" },
-    { name: "Azure Devops", icon: "cib:azure-devops" },
+    { name: "Azure Devops", icon: "logos:azure" },
     { name: "npm", icon: "logos:npm-icon" },
     { name: "Yarn", icon: "logos:yarn" },
   ],
