@@ -7,6 +7,7 @@ export const technologyData = {
       { name: "React.js", icon: "logos:react" },
       { name: "Vue.js", icon: "logos:vue" },
       { name: "Next.js", icon: "logos:nextjs-icon" },
+      { name: "Nuxt", icon: "logos:nuxt-icon" },
       { name: "Typescript", icon: "logos:typescript-icon" },
       { name: "Vite", icon: "logos:vitejs" },
       { name: "React Router", icon: "logos:react-router" },
@@ -45,7 +46,7 @@ export const technologyData = {
     items: [
       { name: "Docker", icon: "logos:docker-icon" },
       { name: "Git", icon: "logos:git-icon" },
-      { name: "Azure Devops", icon: "cib:azure-devops" },
+      { name: "Azure Devops", icon: "logos:azure" },
       { name: "npm", icon: "logos:npm-icon" },
       { name: "Yarn", icon: "logos:yarn" },
     ],
@@ -110,7 +111,7 @@ export const technologyData = {
     description:
       "Content management systems enable the creation, editing, and organization of digital content on websites, making it easy to maintain and publish information without advanced technical knowledge.",
     items: [
-      { name: "Wordpress", icon: "logos:wordpress" },
+      { name: "Wordpress", icon: "logos:wordpress-icon" },
       { name: "Opencart", icon: "logos:opencart" },
       { name: "Blogger", icon: "logos:blogger" },
     ],

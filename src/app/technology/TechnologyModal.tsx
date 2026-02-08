@@ -11,7 +11,7 @@ interface TechnologyProps {
 
 const Technology: React.FC<TechnologyProps> = ({ id }) => {
   const [selectedTechnology, setSelectedTechnology] = useState<string | null>(
-    null
+    null,
   );
 
   const togglePopup = (key: string) => {
@@ -109,22 +109,26 @@ const Technology: React.FC<TechnologyProps> = ({ id }) => {
                             Technologies Used:
                           </h4>
                           <ul
-                            className={`grid-cols-2 sm:grid-cols-2 md:grid-cols-3 ${styles.tech_used_list}`}
+                            className={`grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 ${styles.tech_used_list}`}
                           >
                             {item.items.map((tech, i) => (
                               <li
                                 key={i}
-                                className={styles.tech_used_list_item}
+                                className={`${styles.tech_used_list_item} relative group flex flex-col items-center justify-center`}
                               >
+                                <div className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 w-max max-w-[150px] flex flex-col items-center opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none z-20">
+                                  <span className="bg-gray-800 text-white text-xs font-medium py-1.5 px-3 rounded-lg shadow-lg text-center leading-tight">
+                                    {tech.name}
+                                  </span>
+                                  <span className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-gray-800"></span>
+                                </div>
                                 <Icon
                                   icon={tech.icon}
                                   width="30"
                                   height="30"
-                                  className="text-blue-500"
+                                  className="text-blue-500 transition-transform duration-300 group-hover:scale-110"
+                                  aria-label={tech.name}
                                 />
-                                <span className={styles.tech_used_item_title}>
-                                  {tech.name}
-                                </span>
                               </li>
                             ))}
                           </ul>

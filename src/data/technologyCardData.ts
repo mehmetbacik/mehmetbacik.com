@@ -63,7 +63,7 @@ export const technologyData = {
     { name: "Jira", icon: "logos:jira" },
   ],
   cms: [
-    { name: "Wordpress", icon: "logos:wordpress" },
+    { name: "Wordpress", icon: "logos:wordpress-icon" },
     { name: "Opencart", icon: "logos:opencart" },
     { name: "Blogger", icon: "logos:blogger" },
   ],
