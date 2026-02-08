@@ -173,7 +173,6 @@
               display: flex;
               flex-wrap: wrap;
               gap: 20px;
-              overflow-x: hidden;
               @media (max-width: 425px) {
                 overflow-y: scroll;
                 height: 300px;
