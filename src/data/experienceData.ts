@@ -5,15 +5,12 @@ export const experienceData: ExperienceItem[] = [
     title: "Frontend Developer",
     company: "WPP Production",
     date: "Jan 2025 - Present",
-    description: `As a Frontend Developer in the advertising industry, I specialized in developing dynamic and attention-grabbing web 
-      interfaces to effectively present advertising campaigns. I designed and built multilingual web applications that catered 
-      to different languages and cultures, ensuring compliance with localization requirements. My role involved creating high-performance 
-      solutions and integrating them with various advertising platforms and tools to deliver seamless user experiences. Additionally, 
-      I focused on optimizing frontend performance, enhancing cross-browser compatibility, and presenting creative content effectively. 
-      I utilized Agile methodologies to streamline development processes and deliver innovative features that met both client expectations 
-      and industry standards.`,
-    technology:
-      "Javascript - CSS - HTML - SVN - Python - VSCode - Radar",
+    description: `As a Frontend Developer, I develop interactive and high-impact web interfaces that bring global advertising campaigns to life. 
+    I create multilingual, cross-platform applications tailored to different cultures and localization needs, ensuring content resonates with diverse audiences.
+    My work focuses on delivering fast, scalable, and seamless frontend solutions integrated with production and marketing platforms. I also prioritize 
+    performance optimization, cross-device compatibility, and presenting creative assets effectively, using Agile practices to accelerate development and 
+    exceed client expectations.`,
+    technology: "Javascript - CSS - HTML - SVN - Python - VSCode - Radar",
     logo: "/img/wpp.jpg",
   },
   {
@@ -32,7 +29,7 @@ export const experienceData: ExperienceItem[] = [
     title: "Frontend Developer",
     company: "Hogarth",
     date: "Aug 2022 - Oct 2023",
-    description: `As a Frontend Developer in the advertising industry, I specialized in developing dynamic and attention-grabbing web 
+    description: `As a Frontend Developer, I specialized in developing dynamic and attention-grabbing web 
       interfaces to effectively present advertising campaigns. I designed and built multilingual web applications that catered 
       to different languages and cultures, ensuring compliance with localization requirements. My role involved creating high-performance 
       solutions and integrating them with various advertising platforms and tools to deliver seamless user experiences. Additionally, 
@@ -47,7 +44,7 @@ export const experienceData: ExperienceItem[] = [
     title: "Frontend Developer",
     company: "T-Soft",
     date: "May 2018 - Aug 2022",
-    description: `As a Frontend Developer in the e-commerce industry, I focused on creating user-friendly and visually appealing web interfaces 
+    description: `As a Frontend Developer, I focused on creating user-friendly and visually appealing web interfaces 
     to enhance the online shopping experience. I developed and implemented high-performance solutions for critical areas such as product pages, 
     shopping carts, and checkout processes, ensuring smooth and responsive interactions across various devices and platforms. My role involved 
     coding and developing e-commerce websites, optimizing frontend performance, and fixing bugs to ensure usability. I also collaborated with 
@@ -61,18 +58,17 @@ export const experienceData: ExperienceItem[] = [
     title: "Software Project Manager",
     company: "T-Soft",
     date: "May 2018 - Apr 2020",
-    description: `Managed the end-to-end delivery of e-commerce software projects, from planning and requirement analysis to deployment. 
+    description: `As a Software Project Manager, Managed the end-to-end delivery of e-commerce software projects, from planning and requirement analysis to deployment. 
     I coordinated cross-functional teams, oversaw timelines, and delivered high-quality, scalable solutions that met client needs, while 
     driving efficiency and innovation in every project.`,
-    technology:
-      "Jira - Trello - Azure Devops",
+    technology: "Jira - Trello - Azure Devops",
     logo: "/img/tsoft.jpg",
   },
   {
     title: "Software Developer",
     company: "Model",
     date: "Jun 2015 - Aug 2015",
-    description: `As a Software Developer in the ERP industry, I specialized in modular design and data integration within ERP systems to 
+    description: `As a Software Developer, I specialized in modular design and data integration within ERP systems to 
     streamline business processes and enhance operational efficiency. I developed customized software solutions tailored to meet the unique 
     needs of businesses, optimizing workflows and improving overall system performance. My role involved designing and implementing scalable 
     modules, integrating diverse data sources, and ensuring seamless interaction between various components of the ERP system to support 
@@ -84,7 +80,7 @@ export const experienceData: ExperienceItem[] = [
     title: "Intern",
     company: "T-Soft",
     date: "Jun 2014 - Sep 2014",
-    description: `As a Intern in the e-commerce industry, I helped develop user-friendly web interfaces and assist with maintaining product 
+    description: `As a Intern, I helped develop user-friendly web interfaces and assist with maintaining product 
     pages and checkout processes. My tasks included coding, testing, and debugging frontend components, as well as supporting integration with 
     backend systems. This role provided me with valuable experience in enhancing web performance and usability.`,
     technology: "HTML - CSS - PHP - MySQL - NotePad++ - Photoshop",
@@ -129,7 +125,7 @@ export const technologyIconMapping: { [key: string]: string } = {
   Sketch: "logos:sketch",
   "Adobe Xd": "logos:adobe-xd",
   Zeplin: "logos:zeplin",
-  "VSCode": "logos:visual-studio-code",
+  VSCode: "logos:visual-studio-code",
   Xcode: "logos:xcode",
   BBEdit: "logos:apple-app-store",
   SublimeText: "logos:sublimetext-icon",
