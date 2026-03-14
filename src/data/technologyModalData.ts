@@ -48,7 +48,6 @@ export const technologyData = {
       { name: "Git", icon: "logos:git-icon" },
       { name: "Azure Devops", icon: "logos:azure" },
       { name: "npm", icon: "logos:npm-icon" },
-      { name: "Yarn", icon: "logos:yarn" },
     ],
   },
   design: {
@@ -79,11 +78,10 @@ export const technologyData = {
     description:
       "Code editors and IDEs provide structured environments for writing, debugging, and organizing code efficiently, enabling developers to maintain high-quality workflows.",
     items: [
-      { name: "VS Code", icon: "logos:visual-studio-code" },
+      { name: "VSCode", icon: "logos:visual-studio-code" },
       { name: "Xcode", icon: "logos:xcode" },
       { name: "SublimeText", icon: "logos:sublimetext-icon" },
       { name: "NotePad++", icon: "simple-icons:notepadplusplus" },
-      { name: "BBEdit", icon: "logos:apple-app-store" },
       { name: "Dreamweaver", icon: "logos:adobe-dreamweaver" },
     ],
   },
